@@ -1,0 +1,45 @@
+import React from "react";
+import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
+import { BiMailSend } from "react-icons/bi";
+function Main() {
+  return (
+    <div className="w-full h-screen text-center">
+      <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
+        <div>
+          <p className="uppercase text-sm tracking-wide text-gray-600">
+            LET'S connect & collaborate
+          </p>
+          <h1 className="py-4 text-gray-700">
+            Hey! I'm <span className="text-[#5651e9]"> DARSH</span>
+          </h1>
+          <h1 className="py-2 text-gray-700">A WEB3 & ML Developer</h1>
+          <p className="py-4 text-gray-600 max-w-[85%] m-auto">
+            I am your friendly neighborhood web3+ML guy. I happen to be quite
+            innovative and can hack up solutions for challenges in tech or
+            communication. Over the years, I have habituated myself with
+            learning a new thing or two every single day. My strength lies in my
+            interpersonal skills built hosting, organizing and attending several
+            events. If you came across this site there's a good chance it was
+            through those events.
+          </p>
+          <div className="flex items-center justify-between max-w-[330px] m-auto py-4">
+            <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-150 ease-in duration-300">
+              <FaGithub />
+            </div>
+            <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-150 ease-in duration-300">
+              <BiMailSend />
+            </div>
+            <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-150 ease-in duration-300">
+              <FaLinkedin />
+            </div>
+            <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-150 ease-in duration-300">
+              <FaTwitter />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Main;
