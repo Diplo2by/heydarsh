@@ -13,16 +13,6 @@ const Navbar = () => {
   const [navBg, setNavBg] = useState("#ecf0f3");
   const router = useRouter();
 
-  useEffect(() => {
-    if (router.asPath == "/medify" || router.asPath == "/freeown") {
-      setNavBg("transparent");
-      setLinkColor("#ecf0f3");
-    } else {
-      setNavBg("ecf0f3");
-      setLinkColor("1f2937");
-    }
-  }, [router]);
-
   const handleNav = () => {
     setNav(!nav);
   };
@@ -75,7 +65,11 @@ const Navbar = () => {
               </li>
             </Link>
           </ul>
-          <div onClick={handleNav} className="absolute right-5 md:hidden">
+          <div
+            style={{ color: `${linkColor}` }}
+            onClick={handleNav}
+            className="absolute right-5 md:hidden"
+          >
             <AiOutlineMenu size={20} />
           </div>
         </div>
@@ -118,22 +112,22 @@ const Navbar = () => {
             <div className="py-4 flex flex-col">
               <ul className="uppercase">
                 <Link href="/">
-                  <li onClick={() => setNav(fa)} className="py-4 text-sm">
+                  <li onClick={() => setNav(false)} className="py-4 text-sm">
                     Home
                   </li>
                 </Link>
                 <Link href="/#about">
-                  <li onClick={() => setNav(fa)} className="py-4 text-sm">
+                  <li onClick={() => setNav(false)} className="py-4 text-sm">
                     About
                   </li>
                 </Link>
-                <Link href="#skills/">
-                  <li onClick={() => setNav(fa)} className="py-4 text-sm">
+                <Link href="#skills">
+                  <li onClick={() => setNav(false)} className="py-4 text-sm">
                     Skills
                   </li>
                 </Link>
                 <Link href="/#projects">
-                  <li onClick={() => setNav(fa)} className="py-4 text-sm">
+                  <li onClick={() => setNav(false)} className="py-4 text-sm">
                     Projects
                   </li>
                 </Link>
@@ -149,20 +143,23 @@ const Navbar = () => {
                     </div>
                   </a>
 
-                  <a href="mailto:contactdarshanv@gmail.com" target='_blank'>
-                  <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                    <BiMailSend />
-                  </div>
+                  <a href="mailto:contactdarshanv@gmail.com" target="_blank">
+                    <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                      <BiMailSend />
+                    </div>
                   </a>
-                  <a href="https://www.linkedin.com/in/vdarshh/" target="_blank">
-                  <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                    <FaLinkedin />
-                  </div>
+                  <a
+                    href="https://www.linkedin.com/in/vdarshh/"
+                    target="_blank"
+                  >
+                    <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                      <FaLinkedin />
+                    </div>
                   </a>
-                  <a href="https://twitter.com/vdarshh" target='_blank'>
-                  <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                    <FaTwitter />
-                  </div>
+                  <a href="https://twitter.com/vdarshh" target="_blank">
+                    <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                      <FaTwitter />
+                    </div>
                   </a>
                 </div>
               </div>
