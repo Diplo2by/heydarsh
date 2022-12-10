@@ -5,7 +5,7 @@ import ProjectItem from "./ProjectItem";
 
 const Projects = () => {
   return (
-    <div className="w-full">
+    <div id="projects" className="w-full">
       <div className="max-w-[1240px] mx-auto px-2 py-16 ">
         <p className="text-xl tracking-widest uppercase text-[#5651e9]">
           Projects
@@ -15,13 +15,13 @@ const Projects = () => {
           <ProjectItem
             title="FreeOwn"
             backgroundImg={freeownImg}
-            projectUrl="/property"
+            projectUrl="/freeown"
             techStack="Next JS"
           />
           <ProjectItem
             title="Medify App"
             backgroundImg={medifyImg}
-            projectUrl="/property"
+            projectUrl="/medify"
             techStack="Flutter"
           />
         </div>
