@@ -3,6 +3,7 @@ import About from "../components/About";
 import Main from "../components/Main";
 import Projects from "../components/Projects";
 import Skills from "../components/Skills";
+import pwImg from "../public/assets/preview.png"
 
 export default function Home() {
   return (
@@ -20,7 +21,7 @@ export default function Home() {
           property="og:description"
           content="Tap here to takeoff!"
         />
-        <meta property="og:image" content={"https://iili.io/HnsurFI.md.png"} />
+        <meta property="og:image" content={pwImg} />
 
         <link rel="icon" href="/favicon.ico" />
       </Head>
