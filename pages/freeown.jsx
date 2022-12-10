@@ -1,24 +1,24 @@
 import Image from "next/image";
 import React from "react";
-import medifyImg from "../public/assets/projects/medify.png";
+import freeownImg from "../public/assets/projects/freeown.png";
 import { RiRadioButtonFill } from "react-icons/ri";
 import Link from "next/link";
 
-const medify = () => {
+const freeown = () => {
   return (
     <div>
       <div className="w-screen h-[30vh] lg:h-[40vh] relative">
         <div className="absolute top-0 left-0 w-full h-[30vh] lg:h-[40vh] bg-black/80 z-10" />
         <Image
-          src={medifyImg}
+          src={freeownImg}
           alt="/"
           className="absolute z-1"
           layout="fill"
           objectFit="cover"
         />
         <div className="absolute top-[70%] max-w-[1240px] w-full left-[50%] right[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10">
-          <h2 className="py-2">Medify App</h2>
-          <h3>Solidity / Flutter / Blockchain </h3>
+          <h2 className="py-2">FreeOwn</h2>
+          <h3>Solidity / Next Js / Hardhat </h3>
         </div>
       </div>
       <div className="max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 pt-8">
@@ -29,25 +29,26 @@ const medify = () => {
           <h2>Overview</h2>
           <br />
           <p>
-            An app that stores a person's medical information on blockchain so
-            that medical personnel can access it in an emergency and take
-            appropriate action. In India, around 4,72,606 accidents occur each
-            year, with 50 percent of lives saved if competent medical assistance
-            is provided. This software accomplishes exactly that; in addition to
-            providing medical history, it also informs the patient's relatives.
-            Not only is this software essential for saving lives in an emergency
-            situation, but it also provides the user with privacy and confidence
-            when sharing his medical records because it is based on blockchain
-            technology. When a person's medical history is shared with the
-            medical team, the chances of administering the necessary
-            prescription to save lives increase.
+            In the current generation 'Digital goods' are getting more
+            recognition and value because of the vast improvement in technology
+            and of so many people being connected to the Internet. People can do
+            a lot number of transactions on the internet because of its security
+            and privacy provided by using Crypto currencies these days. One of
+            the popular spots used by crypto currency users is on NFT’s. This
+            NFT market website hosts NFT's of top demands on sale. The users can
+            choose the NFT they are interested in and purchase it anytime with
+            the respective crypto currencies they prefer for the transaction
+            like Bitcoin, Dogecoin, Ethereum etc The NFT market keeps refreshing
+            frequently to provide the users with Latest trending NFT's that are
+            available. The purchasing of NFT is made simpler with our 'payment
+            page' ensuring smooth and fast transaction
           </p>
-          <a href="https://github.com/Diplo2by/Medify" target="_blank">
+          <a href="https://github.com/Diplo2by/freeown" target="_blank">
             <button className="px-8 py-2 mt-4 mr-8">Code</button>
           </a>
-          <a href="https://www.youtube.com/watch?v=k5ESGH4OW4M" target="_blank">
+          {/* <a href="https://www.youtube.com/watch?v=k5ESGH4OW4M" target="_blank">
             <button className="px-8 py-2 mt-4">Demo</button>
-          </a>
+          </a> */}
         </div>
         <div className="col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl p-4">
           <div className="p-2">
@@ -82,4 +83,4 @@ const medify = () => {
   );
 };
 
-export default medify;
+export default freeown;

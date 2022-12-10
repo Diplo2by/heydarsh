@@ -8,7 +8,6 @@ const About = () => {
       <div className="max-w-[1240px] m-auto md:grid grid-cols-3 gap-4">
         <div className="col-span-2">
           <p className="uppercase text-xl tracking-widest text-[#5651e9]">
-            {" "}
             BIO
           </p>
           <p className="uppercase text-2xl py-4">But Who is Darsh exactly?</p>

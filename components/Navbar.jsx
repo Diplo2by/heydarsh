@@ -8,6 +8,7 @@ const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] = useState(false);
 
+
   const handleNav = () => {
     setNav(!nav);
   };
@@ -35,9 +36,9 @@ const Navbar = () => {
       <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
        <Link href='/'>
         <Image
-          src="/assets/android-chrome-256x256.png"
+          src="/assets/android-chrome-192x192.png"
           alt="/"
-          width="125"
+          width="80"
           height="50"
         />
         </Link>
@@ -80,10 +81,10 @@ const Navbar = () => {
             <div>
               <div className="flex w-full items-center justify-between">
                 <Image
-                  src="/assets/android-chrome-256x256.png"
+                  src="/assets/mstile-150x150.png"
                   alt="/"
-                  width={70}
-                  height={50}
+                  width='150'
+                  height='150'
                 />
                 <div
                   onClick={handleNav}
@@ -101,16 +102,16 @@ const Navbar = () => {
             <div className="py-4 flex flex-col">
               <ul className="uppercase">
                 <Link href="/">
-                  <li className="py-4 text-sm">Home</li>
+                  <li onClick={()=>setNav(fa)} className="py-4 text-sm">Home</li>
                 </Link>
                 <Link href="/#about">
-                  <li className="py-4 text-sm">About</li>
+                  <li onClick={()=>setNav(fa)} className="py-4 text-sm">About</li>
                 </Link>
                 <Link href="#skills/">
-                  <li className="py-4 text-sm">Skills</li>
+                  <li onClick={()=>setNav(fa)} className="py-4 text-sm">Skills</li>
                 </Link>
                 <Link href="/#projects">
-                  <li className="py-4 text-sm">Projects</li>
+                  <li onClick={()=>setNav(fa)} className="py-4 text-sm">Projects</li>
                 </Link>
               </ul>
               <div className="pt-40">
