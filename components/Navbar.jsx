@@ -4,10 +4,24 @@ import Link from "next/link";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { BiMailSend } from "react-icons/bi";
+import { useRouter } from "next/router";
+
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] = useState(false);
+  const [linkColor, setLinkColor] = useState("#1f2937");
+  const [navBg, setNavBg] = useState("#ecf0f3");
+  const router = useRouter();
 
+  useEffect(() => {
+    if (router.asPath == "/medify" || router.asPath == "/freeown") {
+      setNavBg("transparent");
+      setLinkColor("#ecf0f3");
+    } else {
+      setNavBg("ecf0f3");
+      setLinkColor("1f2937");
+    }
+  }, [router]);
 
   const handleNav = () => {
     setNav(!nav);
@@ -22,11 +36,13 @@ const Navbar = () => {
       }
     };
 
-    window.addEventListener('scroll', handleShadow);
+    window.addEventListener("scroll", handleShadow);
   }, []);
 
   return (
-    <div id="navbar"
+    <div
+      id="navbar"
+      style={{ backgroundColor: `${navBg}` }}
       className={
         shadow
           ? "fixed w-full h-20 shadow-xl z-[100]"
@@ -34,16 +50,16 @@ const Navbar = () => {
       }
     >
       <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
-       <Link href='/'>
-        <Image
-          src="/assets/android-chrome-192x192.png"
-          alt="/"
-          width="80"
-          height="50"
-        />
+        <Link href="/">
+          <Image
+            src="/assets/android-chrome-192x192.png"
+            alt="/"
+            width="80"
+            height="50"
+          />
         </Link>
         <div>
-          <ul className="hidden md:flex">
+          <ul style={{ color: `${linkColor}` }} className="hidden md:flex">
             <Link href="/">
               <li className="ml-10 text-sm uppercase hover:border-b">Home</li>
             </Link>
@@ -83,8 +99,8 @@ const Navbar = () => {
                 <Image
                   src="/assets/mstile-150x150.png"
                   alt="/"
-                  width='150'
-                  height='150'
+                  width="150"
+                  height="150"
                 />
                 <div
                   onClick={handleNav}
@@ -102,16 +118,24 @@ const Navbar = () => {
             <div className="py-4 flex flex-col">
               <ul className="uppercase">
                 <Link href="/">
-                  <li onClick={()=>setNav(fa)} className="py-4 text-sm">Home</li>
+                  <li onClick={() => setNav(fa)} className="py-4 text-sm">
+                    Home
+                  </li>
                 </Link>
                 <Link href="/#about">
-                  <li onClick={()=>setNav(fa)} className="py-4 text-sm">About</li>
+                  <li onClick={() => setNav(fa)} className="py-4 text-sm">
+                    About
+                  </li>
                 </Link>
                 <Link href="#skills/">
-                  <li onClick={()=>setNav(fa)} className="py-4 text-sm">Skills</li>
+                  <li onClick={() => setNav(fa)} className="py-4 text-sm">
+                    Skills
+                  </li>
                 </Link>
                 <Link href="/#projects">
-                  <li onClick={()=>setNav(fa)} className="py-4 text-sm">Projects</li>
+                  <li onClick={() => setNav(fa)} className="py-4 text-sm">
+                    Projects
+                  </li>
                 </Link>
               </ul>
               <div className="pt-40">
@@ -119,18 +143,27 @@ const Navbar = () => {
                   Hit Me up!
                 </p>
                 <div className="flex items-center justify-between my-4 w-full sm:w-[80%]">
-                  <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                    <FaGithub />
-                  </div>
+                  <a href="https://github.com/Diplo2by" target="_blank">
+                    <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                      <FaGithub />
+                    </div>
+                  </a>
+
+                  <a href="mailto:contactdarshanv@gmail.com" target='_blank'>
                   <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
                     <BiMailSend />
                   </div>
+                  </a>
+                  <a href="https://www.linkedin.com/in/vdarshh/" target="_blank">
                   <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
                     <FaLinkedin />
                   </div>
+                  </a>
+                  <a href="https://twitter.com/vdarshh" target='_blank'>
                   <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
                     <FaTwitter />
                   </div>
+                  </a>
                 </div>
               </div>
             </div>

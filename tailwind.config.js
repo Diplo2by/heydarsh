@@ -7,9 +7,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'montserrat': ['Montserrat'],
-        'lato': ['Lato'],
-        'garamond': ['Garamond']
+        'montserrat': ['Montserrat']
     }
     },
   },

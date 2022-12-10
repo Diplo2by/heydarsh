@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps }) {
   return (<>
   <style jsx global>{`
         html {
-          font-family: ${montserrat.style.fontFamily};
+          font-family: ${montserrat.style.fontFamily},'sans-serif';
         }
       `}</style>
   <Navbar/>

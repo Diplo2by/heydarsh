@@ -23,18 +23,26 @@ const Main = () => {
             through those events.
           </p>
           <div className="flex items-center justify-between max-w-[330px] m-auto py-4">
+          <a href="https://github.com/Diplo2by" target="_blank">
             <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-125 ease-in duration-300">
               <FaGithub />
             </div>
+            </a>
+            <a href="mailto:contactdarshanv@gmail.com" target='_blank'>
             <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-125 ease-in duration-300">
               <BiMailSend />
             </div>
+            </a>
+            <a href="https://www.linkedin.com/in/vdarshh/" target="_blank">
             <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-125 ease-in duration-300">
               <FaLinkedin />
             </div>
+            </a>
+            <a href="https://twitter.com/vdarshh" target='_blank'>
             <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-125 ease-in duration-300">
               <FaTwitter />
             </div>
+            </a>
           </div>
         </div>
       </div>
