@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import medifyImg from "../public/assets/projects/medify.png";
-import { RiRadioButtonFill } from "react-icons/ri";
+import { RiRadioButtonFill,RiGithubFill } from "react-icons/ri";
 import Link from "next/link";
 
 const medify = () => {
@@ -21,8 +21,24 @@ const medify = () => {
           <h3>Solidity / Flutter / Blockchain </h3>
         </div>
       </div>
-      <div className="max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 pt-8">
-        <div className="col-span-4">
+      <div className="max-w-[1400px] mx-auto p-2 grid md:grid-cols-5 gap-8 pt-8">
+        <div className="col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl p-4"> {/*change Col span when adding contributors*/}
+          <div className="p-2">
+            <p className="text-center text-xl font-bold pb-2">Contributors</p>
+            <div className="grid grid-cols-1 md:grid-cols-1">
+              <div className="text-gray-600 text-xl py-2 flex items-center">
+                <RiGithubFill className="pr-1" /> <Link href='https://github.com/adnandelta' target='_blank'>adnandelta</Link>
+              </div>
+              <div className="text-gray-600 text-xl py-2 flex items-center">
+                <RiGithubFill className="pr-1" /> <Link href='https://github.com/harshmehta14' target='_blank'>harshmehta14</Link>
+              </div>
+              <div className="text-gray-600 text-xl py-2 flex items-center">
+                <RiGithubFill className="pr-1" /> <Link href='https://github.com/noobcoder-10' target='_blank'>noobcoder-10</Link>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="col-span-3 lg:mx-0 mx-2">
           <p className="uppercase text-xl tracking-widest text-[#5651e9]">
             PROJECT
           </p>
