@@ -2,6 +2,7 @@ import React from "react";
 import freeownImg from "../public/assets/projects/freeown.png";
 import medifyImg from "../public/assets/projects/medify.png";
 import ProjectItem from "./ProjectItem";
+import easyImg from "../public/assets/projects/easy.png"
 
 const Projects = () => {
   return (
@@ -23,6 +24,12 @@ const Projects = () => {
             backgroundImg={freeownImg}
             projectUrl="/freeown"
             techStack="Next JS"
+          />
+          <ProjectItem
+          title="EasyCT"
+          backgroundImg={easyImg}
+          projectUrl="/easyocr"
+          techStack="Easy OCR"
           />
         </div>
       </div>
