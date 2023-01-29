@@ -38,7 +38,7 @@ const medify = () => {
             </div>
           </div>
         </div>
-        <div className="col-span-3">
+        <div className="col-span-3 lg:mx-0 mx-2">
           <p className="uppercase text-xl tracking-widest text-[#5651e9]">
             PROJECT
           </p>

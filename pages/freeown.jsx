@@ -22,7 +22,7 @@ const freeown = () => {
         </div>
       </div>
       <div className="max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 pt-8">
-        <div className="col-span-4">
+        <div className="col-span-4 lg:mx-0 mx-5">
           <p className="uppercase text-xl tracking-widest text-[#5651e9]">
             PROJECT
           </p>
@@ -34,7 +34,7 @@ const freeown = () => {
             and of so many people being connected to the Internet. People can do
             a lot number of transactions on the internet because of its security
             and privacy provided by using Crypto currencies these days. One of
-            the popular spots used by crypto currency users is on NFT’s. This
+            the popular spots used by crypto currency users is on NFT's. This
             NFT market website hosts NFT's of top demands on sale. The users can
             choose the NFT they are interested in and purchase it anytime with
             the respective crypto currencies they prefer for the transaction
