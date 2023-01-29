@@ -26,7 +26,7 @@ const Projects = () => {
             techStack="Next JS"
           />
           <ProjectItem
-          title="Chinese Character Recognition"
+          title="EasyCT"
           backgroundImg={easyImg}
           projectUrl="/easyocr"
           techStack="Easy OCR"
