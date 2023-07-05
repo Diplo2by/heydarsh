@@ -16,12 +16,12 @@ export default function Home() {
           property="og:title"
           content="Darsh | WEB3 & ML"
         />
-        
+
         <meta
           property="og:description"
           content="Tap here to takeoff!"
         />
-        <meta property="og:image" content={pwImg} />
+        <meta property="og:image" content={'https://www.heydarsh.co/assets/preview.png'} />
 
         <link rel="icon" href="/favicon.ico" />
       </Head>
