@@ -4,7 +4,7 @@ import lvlupImg from "../public/assets/projects/lvlup.png";
 import { RiRadioButtonFill } from "react-icons/ri";
 import Link from "next/link";
 
-const lvlup = () => {
+const Lvlup = () => {
     return (
         <div>
             <div className="w-screen h-[30vh] lg:h-[40vh] relative">
@@ -69,4 +69,4 @@ const lvlup = () => {
     );
 };
 
-export default lvlup;
+export default Lvlup;
