@@ -34,7 +34,7 @@ const Skills = () => {
               </div>
             </div>
           </div>
-          <div className="p-6 shadow-xl rounded-xl hover:scale-125 ease-in duration-300">
+          {/* <div className="p-6 shadow-xl rounded-xl hover:scale-125 ease-in duration-300">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image height="64" width="64" src={c} alt="Skill C" />
@@ -43,7 +43,7 @@ const Skills = () => {
                 <h3>C</h3>
               </div>
             </div>
-          </div>
+          </div> */}
           <div className="p-6 shadow-xl rounded-xl hover:scale-125 ease-in duration-300">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
@@ -129,7 +129,7 @@ const Skills = () => {
               </div>
             </div>
           </div>
-          <div className="p-6 shadow-xl rounded-xl hover:scale-125 ease-in duration-300">
+          {/* <div className="p-6 shadow-xl rounded-xl hover:scale-125 ease-in duration-300">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image height="64" width="64" src={ipfs} alt="Skill IPFS" />
@@ -138,7 +138,7 @@ const Skills = () => {
                 <h3>IPFS</h3>
               </div>
             </div>
-          </div>
+          </div> */}
           <div className="p-6 shadow-xl rounded-xl hover:scale-125 ease-in duration-300">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
@@ -154,7 +154,7 @@ const Skills = () => {
               </div>
             </div>
           </div>
-          <div className="p-6 shadow-xl rounded-xl hover:scale-125 ease-in duration-300">
+          {/* <div className="p-6 shadow-xl rounded-xl hover:scale-125 ease-in duration-300">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image
@@ -168,8 +168,8 @@ const Skills = () => {
                 <h3>Tensorflow</h3>
               </div>
             </div>
-          </div>
-          <div className="p-6 shadow-xl rounded-xl hover:scale-125 ease-in duration-300">
+          </div> */}
+          {/* <div className="p-6 shadow-xl rounded-xl hover:scale-125 ease-in duration-300">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image height="64" width="64" src={github} alt="Skill GitHub" />
@@ -178,7 +178,7 @@ const Skills = () => {
                 <h3>GitHub</h3>
               </div>
             </div>
-          </div>
+          </div> */}
           <div className="p-6 shadow-xl rounded-xl hover:scale-125 ease-in duration-300">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
