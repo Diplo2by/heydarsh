@@ -4,7 +4,7 @@ import easy2Img from "../public/assets/projects/easy.png";
 import { RiRadioButtonFill, RiGithubFill } from "react-icons/ri";
 import Link from "next/link";
 
-const easyocr = () => {
+const Easyocr = () => {
   return (
     <div>
       <div className="w-screen h-[30vh] lg:h-[40vh] relative">
@@ -103,4 +103,4 @@ const easyocr = () => {
   );
 };
 
-export default easyocr;
+export default Easyocr;

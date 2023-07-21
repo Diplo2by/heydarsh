@@ -3,7 +3,7 @@ import freeownImg from "../public/assets/projects/freeown.png";
 import medifyImg from "../public/assets/projects/medify.png";
 import ProjectItem from "./ProjectItem";
 import easyImg from "../public/assets/projects/easy.png"
-
+import lvlupImg from "../public/assets/projects/lvlup.png"
 const Projects = () => {
   return (
     <div id="projects" className="w-full">
@@ -26,10 +26,16 @@ const Projects = () => {
             techStack="Next JS"
           />
           <ProjectItem
-          title="EasyCT"
+          title="Easy CT"
           backgroundImg={easyImg}
           projectUrl="/easyocr"
           techStack="Easy OCR"
+          />
+          <ProjectItem
+          title="Lvl UP Creators"
+          backgroundImg={lvlupImg}
+          projectUrl="/lvlup"
+          techStack="Next Js"
           />
         </div>
       </div>

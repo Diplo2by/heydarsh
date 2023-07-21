@@ -4,7 +4,7 @@ import freeownImg from "../public/assets/projects/freeown.png";
 import { RiRadioButtonFill } from "react-icons/ri";
 import Link from "next/link";
 
-const freeown = () => {
+const Freeown = () => {
   return (
     <div>
       <div className="w-screen h-[30vh] lg:h-[40vh] relative">
@@ -80,4 +80,4 @@ const freeown = () => {
   );
 };
 
-export default freeown;
+export default Freeown;

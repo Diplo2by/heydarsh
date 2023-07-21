@@ -4,7 +4,7 @@ import medifyImg from "../public/assets/projects/medify.png";
 import { RiRadioButtonFill,RiGithubFill } from "react-icons/ri";
 import Link from "next/link";
 
-const medify = () => {
+const Medify = () => {
   return (
     <div>
       <div className="w-screen h-[30vh] lg:h-[40vh] relative">
@@ -98,4 +98,4 @@ const medify = () => {
   );
 };
 
-export default medify;
+export default Medify;
