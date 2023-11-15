@@ -10,7 +10,7 @@ export default function Home() {
     <div>
       <Head>
         <title>Darsh | WEB3 & ML</title>
-        <meta property="og:url" content="https://www.heydarsh.co/" />
+        <meta property="og:url" content="https://www.heydarsh.xyz/" />
         <meta name="description" content="Tap here to takeoff!" key="desc" />
         <meta name="og:description" content="Tap here to takeoff!" key="desc" />
 
@@ -23,7 +23,7 @@ export default function Home() {
           property="og:description"
           content="Tap here to takeoff!"
         />
-        <meta property="og:image" content={'https://www.heydarsh.co/assets/p2.png'} />
+        <meta property="og:image" content={'https://www.heydarsh.xyz/assets/p2.png'} />
         <meta property="og:type" content="website" />
 
         <link rel="icon" href="/favicon.ico" />
