@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import { IoMdDocument } from 'react-icons/io'
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { BiMailSend } from "react-icons/bi";
 import { useRouter } from "next/router";
@@ -156,9 +157,9 @@ const Navbar = () => {
                       <FaLinkedin />
                     </div>
                   </a>
-                  <a href="https://twitter.com/vdarshh" target="_blank">
+                  <a href="/assets/resume/resume.pdf" target="_blank">
                     <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                      <FaTwitter />
+                      <IoMdDocument />
                     </div>
                   </a>
                 </div>
