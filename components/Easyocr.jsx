@@ -3,18 +3,25 @@ import React from "react";
 import easy2Img from "../public/assets/projects/easy.png";
 import { RiRadioButtonFill, RiGithubFill } from "react-icons/ri";
 import Link from "next/link";
+import Head from "next/head";
+
 
 const Easyocr = () => {
   return (
     <div>
+      <Head>
+        <title>
+          Projects - Chinese Character Recognition
+        </title>
+      </Head>
       <div className="w-screen h-[30vh] lg:h-[40vh] relative">
         <div className="absolute top-0 left-0 w-full h-[30vh] lg:h-[40vh] bg-black/80 z-10" />
         <Image
           src={easy2Img}
           alt="/"
           className="absolute z-1"
-        //   layout="fill"
-        //   objectFit="cover"
+          //   layout="fill"
+          //   objectFit="cover"
           fill="true" //prevent it from being cropped
         />
         <div className="absolute top-[70%] max-w-[1240px] w-full left-[50%] right[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10">

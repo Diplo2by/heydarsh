@@ -3,10 +3,17 @@ import React from "react";
 import lvlupImg from "../public/assets/projects/lvlup.png";
 import { RiRadioButtonFill } from "react-icons/ri";
 import Link from "next/link";
+import Head from "next/head";
+
 
 const Lvlup = () => {
     return (
         <div>
+            <Head>
+                <title>
+                   Projects - LvL Up Creators
+                </title>
+            </Head>
             <div className="w-screen h-[30vh] lg:h-[40vh] relative">
                 <div className="absolute top-0 left-0 w-full h-[30vh] lg:h-[40vh] bg-black/80 z-10" />
                 <Image
