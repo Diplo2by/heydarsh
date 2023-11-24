@@ -23,7 +23,7 @@ export default function Home() {
           property="og:description"
           content="Tap here to takeoff!"
         />
-        <meta property="og:image" content={'https://www.heydarsh.xyz/assets/p2.png'} />
+        <meta property="og:image" content={'https://www.heydarsh.xyz/assets/p2updated.png'} />
         <meta property="og:type" content="website" />
 
         <link rel="icon" href="/favicon.ico" />
