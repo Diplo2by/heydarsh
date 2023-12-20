@@ -23,8 +23,8 @@ const Easyocr = () => {
                     fill="true" //prevent it from being cropped
                 />
                 <div className="absolute top-[70%] max-w-[1240px] w-full left-[50%] right[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10">
-                    <h2 className="py-2">Indian Organ Procurement and Transplantation Network</h2>
-                    <h3>Next.Js / Tailwind CSS / Hardhat / Metamask </h3>
+                    <h2 className="py-2">IOPTN Portal</h2>
+                    <h3>Next.Js / Hardhat </h3>
                 </div>
             </div>
             <div className="max-w-[1400px] mx-auto p-2 grid md:grid-cols-5 gap-8 pt-8">
