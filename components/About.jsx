@@ -13,7 +13,7 @@ const About = () => {
           <p className="uppercase text-2xl py-4">But Who is Darsh exactly?</p>
           <p className="py-2 text-gray-600">
             Hello, I'm Darshan or Darsh or Vdarsh or Diplo depending on who you
-            ask. I'm a third-year undergrad student at REVA University,
+            ask. I'm a B.Tech undergrad from REVA University,
             Bengaluru. As a Computer Science major, I enjoy working in the
             fields of Data Science, AI/ML, and blockchain technologies. I am
             also up for tech fests, hackathons and code jams. I for one am a
@@ -30,7 +30,7 @@ const About = () => {
           </p>
           <p className="py-3 text-gray-600">
             I am also a huge fan of performing in general, be it podcasts, Radio
-            shows or even Dumb Charades, be it extempore or Mad Ads, I'll whip
+            shows Dumb Charades, be it extempore or or even Mad Ads, I'll whip
             up something on time and make it look more than presentable. My past
             wild rides made me love filmmaking and editing but wouldn't really
             call it one of my strong suits. I do have a history/Architectural
