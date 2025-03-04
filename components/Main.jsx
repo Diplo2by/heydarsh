@@ -1,6 +1,6 @@
 import React from "react";
-import { FaLinkedin, FaGithub, } from "react-icons/fa";
-import { IoMdDocument } from 'react-icons/io'
+import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { IoMdDocument } from "react-icons/io";
 import { BiMailSend } from "react-icons/bi";
 const Main = () => {
   return (
@@ -29,7 +29,7 @@ const Main = () => {
                 <FaGithub />
               </div>
             </a>
-            <a href="mailto:contactdarshanv@gmail.com" target='_blank'>
+            <a href="mailto:contactdarshanv@gmail.com" target="_blank">
               <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-125 ease-in duration-300">
                 <BiMailSend />
               </div>
@@ -39,7 +39,10 @@ const Main = () => {
                 <FaLinkedin />
               </div>
             </a>
-            <a href="/assets/resume/darshan_resume_mar_2025.pdf" target='_blank'>
+            <a
+              href="/assets/resume/Darshan_Resume_Mar_2025_v_2.pdf"
+              target="_blank"
+            >
               <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-125 ease-in duration-300">
                 <IoMdDocument />
               </div>
@@ -49,6 +52,6 @@ const Main = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Main;
