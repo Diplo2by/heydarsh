@@ -39,7 +39,7 @@ const Main = () => {
                 <FaLinkedin />
               </div>
             </a>
-            <a href="/assets/resume/resume.pdf" target='_blank'>
+            <a href="/assets/resume/darshan_resume_mar_2025.pdf" target='_blank'>
               <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-125 ease-in duration-300">
                 <IoMdDocument />
               </div>
