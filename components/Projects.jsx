@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import freeownImg from "../public/assets/projects/freeown3.png";
 import medifyImg from "../public/assets/projects/medify2.png";
 import easyImg from "../public/assets/projects/easy.png";
@@ -43,13 +43,10 @@ const Projects = () => {
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Number of projects to show at a time based on screen size
   const getVisibleProjects = () => {
-    // For large screens, show 2 projects
     const visibleCount = 1;
     const startIndex = currentIndex;
 
-    // Create a circular array to loop through projects
     const visibleProjects = [];
     for (let i = 0; i < visibleCount; i++) {
       const index = (startIndex + i) % projects.length;
@@ -78,15 +75,15 @@ const Projects = () => {
         <h2 className="py-4">What I've built</h2>
 
         <div className="relative">
-          {/* Carousel navigation */}
+          {/* Carousel left */}
           <div className="absolute top-1/2 left-4 transform -translate-y-1/2 z-10">
-            <button
+            <div
               onClick={prevSlide}
-              className="p-2 rounded-full bg-white shadow-md hover:bg-gray-100"
+              className="p-2 rounded-full bg-white shadow-md hover:bg-gray-100 hover:cursor-pointer"
               aria-label="Previous project"
             >
               <ChevronLeft size={24} />
-            </button>
+            </div>
           </div>
 
           {/* Projects display */}
@@ -101,27 +98,27 @@ const Projects = () => {
               />
             ))}
           </div>
-
+          {/* Carousel Right */}
           <div className="absolute top-1/2 right-4 transform -translate-y-1/2 z-10">
-            <button
+            <div
               onClick={nextSlide}
-              className="p-2 rounded-full bg-white shadow-md hover:bg-gray-100"
+              className="p-2 rounded-full bg-white shadow-md hover:bg-gray-100 hover:cursor-pointer"
               aria-label="Next project"
             >
               <ChevronRight size={24} />
-            </button>
+            </div>
           </div>
         </div>
 
         {/* Carousel indicators */}
         <div className="flex justify-center mt-6 space-x-2">
           {projects.map((_, idx) => (
-            <button
+            <div
               key={idx}
               onClick={() => setCurrentIndex(idx)}
-              className={`h-3 w-3 rounded-full ${
-                idx === currentIndex ? "bg-[#5651e9]" : "bg-gray-300"
-              }`}
+              className={`h-3 w-3 rounded-full hover:cursor-pointer
+                ${idx === currentIndex ? "bg-[#5651e9]" : "bg-gray-300"}
+              `}
               aria-label={`Go to project ${idx + 1}`}
             />
           ))}
