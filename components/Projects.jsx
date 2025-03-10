@@ -42,6 +42,11 @@ const Projects = () => {
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [touchStart, setTouchStart] = useState(null);
+  const [touchEnd, setTouchEnd] = useState(null);
+
+  // Minimum swipe distance (in px)
+  const minSwipeDistance = 50;
 
   const getVisibleProjects = () => {
     const visibleCount = 1;
@@ -66,28 +71,67 @@ const Projects = () => {
     );
   };
 
+  // Touch event handlers for swipe functionality
+  const onTouchStart = (e) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const onTouchMove = (e) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+
+    if (isLeftSwipe) {
+      nextSlide();
+    } else if (isRightSwipe) {
+      prevSlide();
+    }
+  };
+
+  // Auto-scrolling effect (optional)
+  useEffect(() => {
+    const autoScroll = setInterval(() => {
+      nextSlide();
+    }, 5000); // Change slide every 5 seconds
+
+    return () => clearInterval(autoScroll);
+  }, []);
+
   return (
     <div id="projects" className="w-full">
-      <div className="max-w-[1240px] mx-auto px-2 py-16">
+      <div className="max-w-[1240px] mx-auto px-2 py-12 sm:py-16">
         <p className="text-xl tracking-widest uppercase text-[#5651e9]">
           Projects
         </p>
-        <h2 className="py-4">What I've built</h2>
+        <h2 className="py-2 sm:py-4">What I've built</h2>
 
-        <div className="relative">
+        <div
+          className="relative"
+          onTouchStart={onTouchStart}
+          onTouchMove={onTouchMove}
+          onTouchEnd={onTouchEnd}
+        >
           {/* Carousel left */}
-          <div className="absolute top-1/2 left-4 transform -translate-y-1/2 z-10">
+          <div className="absolute top-1/2 left-1 sm:left-4 transform -translate-y-1/2 z-10">
             <div
               onClick={prevSlide}
-              className="p-2 rounded-full bg-white shadow-md hover:bg-gray-100 hover:cursor-pointer"
+              className="p-1 sm:p-2 rounded-full bg-white shadow-md hover:bg-gray-100 hover:cursor-pointer"
               aria-label="Previous project"
             >
-              <ChevronLeft size={24} />
+              <ChevronLeft size={16} className="sm:hidden" />
+              <ChevronLeft size={24} className="hidden sm:block" />
             </div>
           </div>
 
           {/* Projects display */}
-          <div className="grid md:grid-cols-1 px-20">
+          <div className="px-8 sm:px-20">
             {getVisibleProjects().map((project, idx) => (
               <ProjectItem
                 key={`${project.title}-${idx}`}
@@ -98,25 +142,27 @@ const Projects = () => {
               />
             ))}
           </div>
+
           {/* Carousel Right */}
-          <div className="absolute top-1/2 right-4 transform -translate-y-1/2 z-10">
+          <div className="absolute top-1/2 right-1 sm:right-4 transform -translate-y-1/2 z-10">
             <div
               onClick={nextSlide}
-              className="p-2 rounded-full bg-white shadow-md hover:bg-gray-100 hover:cursor-pointer"
+              className="p-1 sm:p-2 rounded-full bg-white shadow-md hover:bg-gray-100 hover:cursor-pointer"
               aria-label="Next project"
             >
-              <ChevronRight size={24} />
+              <ChevronRight size={16} className="sm:hidden" />
+              <ChevronRight size={24} className="hidden sm:block" />
             </div>
           </div>
         </div>
 
         {/* Carousel indicators */}
-        <div className="flex justify-center mt-6 space-x-2">
+        <div className="flex justify-center mt-4 sm:mt-6 space-x-1 sm:space-x-2">
           {projects.map((_, idx) => (
             <div
               key={idx}
               onClick={() => setCurrentIndex(idx)}
-              className={`h-3 w-3 rounded-full hover:cursor-pointer
+              className={`h-2 w-2 sm:h-3 sm:w-3 rounded-full hover:cursor-pointer
                 ${idx === currentIndex ? "bg-[#5651e9]" : "bg-gray-300"}
               `}
               aria-label={`Go to project ${idx + 1}`}
