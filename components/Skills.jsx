@@ -1,39 +1,37 @@
 import Image from "next/image";
 import React from "react";
-import python from "../public/assets/skills/python.png";
-import html from "../public/assets/skills/html.png";
-import github from "../public/assets/skills/github.png";
-import css from "../public/assets/skills/css3.png";
-import javascript from "../public/assets/skills/javascript.png";
-import next from "../public/assets/skills/next.png";
-import rust from "../public/assets/skills/rust.png";
-import tailwind from "../public/assets/skills/tailwind.png";
-import solidity from "../public/assets/skills/solidity.png";
-import metamask from "../public/assets/skills/metamask.png";
-import writing from "../public/assets/skills/writing.png";
-// import java from "../public/assets/skills/java.png";
-// import springboot from "../public/assets/skills/springboot.png";
-// import githubactions from "../public/assets/skills/githubactions.png";
-// import gcp from "../public/assets/skills/gcp.png";
+import python from "../public/assets/skills/python.webp";
+import html from "../public/assets/skills/html.webp";
+import github from "../public/assets/skills/github.webp";
+import css from "../public/assets/skills/css3.webp";
+import javascript from "../public/assets/skills/javascript.webp";
+import next from "../public/assets/skills/next.webp";
+import rust from "../public/assets/skills/rust.webp";
+import tailwind from "../public/assets/skills/tailwind.webp";
+import solidity from "../public/assets/skills/solidity.webp";
+import metamask from "../public/assets/skills/metamask.webp";
+import writing from "../public/assets/skills/writing.webp";
+import java from "../public/assets/skills/java.webp";
+import springboot from "../public/assets/skills/springboot.webp";
+import githubactions from "../public/assets/skills/actions.webp";
+import gcp from "../public/assets/skills/gcp.webp";
+import fastApi from "../public/assets/skills/FastAPI.webp";
 
 const Skills = () => {
   // Skill items
   const skillsList = [
-    { name: "Python", icon: python },
-    { name: "HTML", icon: html },
-    { name: "CSS", icon: css },
     { name: "Java Script", icon: javascript },
     { name: "Next.js", icon: next },
+    { name: "Python", icon: python },
+    { name: "Fast API", icon: fastApi },
+    { name: "Java", icon: java },
+    { name: "Spring Boot", icon: springboot },
+    { name: "GitHub Actions", icon: githubactions },
+    { name: "Google Cloud Platform", icon: gcp },
     { name: "Tailwind", icon: tailwind },
     { name: "Solidity", icon: solidity },
     { name: "Rust", icon: rust },
-    { name: "Meta Mask", icon: metamask },
     { name: "Content Curation", icon: writing },
-    // { name: "Java", icon: java },
-    // { name: "Spring Boot", icon: springboot },
-    // { name: "GitHub Actions", icon: githubactions },
-    // { name: "GCP", icon: gcp },
-    // { name: "GitHub", icon: github },
   ];
 
   return (
