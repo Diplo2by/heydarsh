@@ -95,7 +95,9 @@ const Projects = () => {
     }
   };
 
-  // Auto-scrolling effect (optional)
+  // TODO - Revist
+
+  // Auto-scrolling effect
   useEffect(() => {
     const autoScroll = setInterval(() => {
       nextSlide();
