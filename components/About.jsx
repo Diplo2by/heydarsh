@@ -1,17 +1,17 @@
 import React from "react";
-import darsh_pic from "../public/assets/Darshan.jpg";
+import darsh_pic from "../public/assets/darsh3.jpeg";
 import Image from "next/image";
 import Link from "next/link";
 const About = () => {
   return (
-    <div id ='about' className="w-full md:h-screen p-2 flex items-center py-16">
+    <div id ='about' className="w-full md:h-screen px-2 flex items-center py-16">
       <div className="max-w-[1240px] m-auto md:grid grid-cols-3 gap-4">
         <div className="col-span-2">
           <p className="uppercase text-xl tracking-widest text-[#5651e9]">
             BIO
           </p>
           <p className="uppercase text-2xl py-4">But Who is Darsh exactly?</p>
-          <p className="py-2 text-gray-600">
+          <p className="py-2 text-gray-600 text-justify">
             Hello, I'm Darshan or Darsh or Vdarsh or Diplo depending on who you
             ask. I'm a B.Tech undergrad from REVA University,
             Bengaluru. As a Computer Science major, I enjoy working in the
