@@ -5,7 +5,7 @@ import { BiMailSend } from "react-icons/bi";
 const Main = () => {
   return (
     <div id="main" className="w-full h-screen text-center">
-      <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
+      <div className="max-w-[1240px] w-full h-full mx-auto flex justify-center items-center">
         <div>
           <p className="uppercase text-sm tracking-wide text-gray-600">
             LET'S connect & collaborate
@@ -14,7 +14,7 @@ const Main = () => {
             Hey! I'm <span className="text-[#5651e9]"> DARSH</span>
           </h1>
           <h1 className="py-2 text-gray-700">A WEB3 & ML Developer</h1>
-          <p className="py-4 text-gray-600 max-w-[85%] m-auto">
+          <p className="py-4 text-gray-600 max-w-[85%] m-auto text-justify md:text-center">
             I am your friendly neighborhood web3+ML guy. I happen to be quite
             innovative and can hack up solutions for challenges in tech or
             communication. Over the years, I have habituated myself with
@@ -40,7 +40,7 @@ const Main = () => {
               </div>
             </a>
             <a
-              href="/assets/resume/Darshan_Resume_Mar_2025_v_2.pdf"
+              href="/assets/resume/darshan_resume_mar_2025.pdf"
               target="_blank"
             >
               <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-125 ease-in duration-300">

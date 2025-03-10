@@ -1,6 +1,6 @@
 {
   "name": "heydarsh",
-  "version": "0.1.0",
+  "version": "2.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -12,6 +12,7 @@
     "@next/font": "^13.0.4",
     "@vercel/analytics": "^1.0.1",
     "https-proxy-agent": "^7.0.1",
+    "lucide-react": "^0.479.0",
     "next": "13.0.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
