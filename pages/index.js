@@ -7,7 +7,7 @@ import pwImg from "../public/assets/preview.png"
 
 export default function Home() {
   return (
-    <div>
+    <div className="px-4 md:px-0">
       <Head>
         <title>Darsh | WEB3 & ML</title>
         <meta property="og:url" content="https://www.heydarsh.xyz/" />
