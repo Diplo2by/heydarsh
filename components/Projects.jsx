@@ -107,12 +107,12 @@ const Projects = () => {
   }, []);
 
   return (
-    <div id="projects" className="w-full">
+    <div id="projects" className="w-full lg:h-screen p-4">
       <div className="max-w-[1240px] mx-auto px-2 py-12 sm:py-16">
         <p className="text-xl tracking-widest uppercase text-[#5651e9]">
           Projects
         </p>
-        <h2 className="py-2 sm:py-4">What I've built</h2>
+        <p className="py-2 sm:py-4 font-bold text-2xl md:text-4xl">What I've built</p>
 
         <div
           className="relative"
