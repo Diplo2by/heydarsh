@@ -20,7 +20,7 @@ const About = () => {
             staunch supporter and proponent of FOSS tech and will try to include
             as many open-source resources in my projects as I can.
           </p>
-          <p className="py-3 text-gray-600">
+          <p className="py-3 text-gray-600 text-justify">
             My other interests include quizzing and debating, have a degree of
             experience in both of them. I also love to write, heck I even wrote
             content for a budding esports and gaming site. Moreover, I also
@@ -28,7 +28,7 @@ const About = () => {
             published in the school magazine, so yeah I think we agree that I
             can do a bit of writing.
           </p>
-          <p className="py-3 text-gray-600">
+          <p className="py-3 text-gray-600 text-justify">
             I am also a huge fan of performing in general, be it podcasts, Radio
             shows Dumb Charades, be it extempore or or even Mad Ads, I'll whip
             up something on time and make it look more than presentable. My past
