@@ -14,7 +14,7 @@ const About = () => {
           <p className="py-2 text-gray-600 text-justify">
             Hello, I'm Darshan or Darsh or Vdarsh or Diplo depending on who you
             ask. I'm a B.Tech undergrad from REVA University,
-            Bengaluru. As a Computer Science major, I enjoy working in the
+            Bengaluru. As a CompSci major, I enjoy working in the
             fields of Data Science, AI/ML, and blockchain technologies. I am
             also up for tech fests, hackathons and code jams. I for one am a
             staunch supporter and proponent of FOSS tech and will try to include
