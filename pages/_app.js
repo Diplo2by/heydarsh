@@ -1,6 +1,6 @@
 import '../styles/globals.css'
 import Navbar from '../components/Navbar'
-import {Montserrat} from '@next/font/google'
+import {Montserrat} from "next/font/google"
 import {Analytics} from '@vercel/analytics/react'
 const montserrat = Montserrat({subsets:['latin']})
 
