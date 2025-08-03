@@ -46,7 +46,8 @@ const Navbar = () => {
             src="/assets/darshlogo.png"
             alt="/"
             width="80"
-            height="50"
+            height="60"
+            className="2xl:p-0 pt-6 pl-3"
           />
         </Link>
         <div>
@@ -85,7 +86,7 @@ const Navbar = () => {
           <div
             className={
               nav
-                ? "fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500"
+                ? "fixed right-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500"
                 : "fixed left-[-100%] p-10 ease-in duration-300"
             }
           >
@@ -94,8 +95,8 @@ const Navbar = () => {
                 <Image
                   src="/assets/darshlogo.png"
                   alt="/"
-                  width="150"
-                  height="150"
+                  width="100"
+                  height="100"
                 />
                 <div
                   onClick={handleNav}
