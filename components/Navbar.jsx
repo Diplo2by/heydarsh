@@ -43,7 +43,7 @@ const Navbar = () => {
       <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
         <Link href="/">
           <Image
-            src="/assets/android-chrome-192x192.png"
+            src="/assets/darshlogo.png"
             alt="/"
             width="80"
             height="50"
@@ -92,7 +92,7 @@ const Navbar = () => {
             <div>
               <div className="flex w-full items-center justify-between">
                 <Image
-                  src="/assets/mstile-150x150.png"
+                  src="/assets/darshlogo.png"
                   alt="/"
                   width="150"
                   height="150"
