@@ -13,9 +13,9 @@ const Main = () => {
           <h1 className="py-4 text-gray-700">
             Hey! I'm <span className="text-[#5651e9]"> DARSH</span>
           </h1>
-          <h1 className="py-2 text-gray-700">A WEB3 & ML Developer</h1>
+          <h1 className="py-2 text-gray-700">I Build Tech & Communities</h1>
           <p className="py-4 text-gray-600 max-w-[85%] m-auto text-justify md:text-center">
-            I am your friendly neighborhood web3+ML guy. I happen to be quite
+            I am your friendly neighborhood tech bro. I happen to be quite
             innovative and can hack up solutions for challenges in tech or
             communication. Over the years, I have habituated myself with
             learning a new thing or two every single day. My strength lies in my
