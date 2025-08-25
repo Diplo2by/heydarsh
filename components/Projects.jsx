@@ -124,7 +124,7 @@ const Projects = () => {
           <div className="absolute top-1/2 left-1 sm:left-4 transform -translate-y-1/2 z-10">
             <div
               onClick={prevSlide}
-              className="p-1 sm:p-2 rounded-full bg-white shadow-md hover:bg-gray-100 hover:cursor-pointer"
+              className="p-1 sm:p-2 rounded-full bg-white dark:bg-gray-800 shadow-md hover:bg-gray-100 dark:hover:bg-gray-700 hover:cursor-pointer"
               aria-label="Previous project"
             >
               <ChevronLeft size={16} className="sm:hidden" />
@@ -149,7 +149,7 @@ const Projects = () => {
           <div className="absolute top-1/2 right-1 sm:right-4 transform -translate-y-1/2 z-10">
             <div
               onClick={nextSlide}
-              className="p-1 sm:p-2 rounded-full bg-white shadow-md hover:bg-gray-100 hover:cursor-pointer"
+              className="p-1 sm:p-2 rounded-full bg-white dark:bg-gray-800 shadow-md hover:bg-gray-100 dark:hover:bg-gray-700 hover:cursor-pointer"
               aria-label="Next project"
             >
               <ChevronRight size={16} className="sm:hidden" />
@@ -165,7 +165,7 @@ const Projects = () => {
               key={idx}
               onClick={() => setCurrentIndex(idx)}
               className={`h-2 w-2 sm:h-3 sm:w-3 rounded-full hover:cursor-pointer
-                ${idx === currentIndex ? "bg-[#5651e9]" : "bg-gray-300"}
+                ${idx === currentIndex ? "bg-[#5651e9]" : "bg-gray-300 dark:bg-gray-600"}
               `}
               aria-label={`Go to project ${idx + 1}`}
             />

@@ -32,13 +32,13 @@ const Medify = () => {
           <div className="p-2">
             <p className="text-center text-xl font-bold pb-2">Contributors</p>
             <div className="grid grid-cols-1 md:grid-cols-1">
-              <div className="text-gray-600 text-xl py-2 flex items-center">
+              <div className=" text-xl py-2 flex items-center">
                 <RiGithubFill className="pr-1" /> <Link href='https://github.com/adnandelta' target='_blank'>adnandelta</Link>
               </div>
-              <div className="text-gray-600 text-xl py-2 flex items-center">
+              <div className=" text-xl py-2 flex items-center">
                 <RiGithubFill className="pr-1" /> <Link href='https://github.com/harshmehta14' target='_blank'>harshmehta14</Link>
               </div>
-              <div className="text-gray-600 text-xl py-2 flex items-center">
+              <div className=" text-xl py-2 flex items-center">
                 <RiGithubFill className="pr-1" /> <Link href='https://github.com/noobcoder-10' target='_blank'>noobcoder-10</Link>
               </div>
             </div>
@@ -75,22 +75,22 @@ const Medify = () => {
           <div className="p-2">
             <p className="text-center font-bold pb-2">Tech Stack</p>
             <div className="grid grid-cols-3 md:grid-cols-1">
-              <div className="text-gray-600 py-2 flex items-center">
+              <div className=" py-2 flex items-center">
                 <RiRadioButtonFill className="pr-1" /> Solidity
               </div>
-              <div className="text-gray-600 py-2 flex items-center">
+              <div className=" py-2 flex items-center">
                 <RiRadioButtonFill className="pr-1" /> Flutter
               </div>
-              <div className="text-gray-600 py-2 flex items-center">
+              <div className=" py-2 flex items-center">
                 <RiRadioButtonFill className="pr-1" /> WEB3dart
               </div>
-              <div className="text-gray-600 py-2 flex items-center">
+              <div className=" py-2 flex items-center">
                 <RiRadioButtonFill className="pr-1" /> Metamask{" "}
               </div>
-              <div className="text-gray-600 py-2 flex items-center">
+              <div className=" py-2 flex items-center">
                 <RiRadioButtonFill className="pr-1" /> Infura{" "}
               </div>
-              <div className="text-gray-600 py-2 flex items-center">
+              <div className=" py-2 flex items-center">
                 <RiRadioButtonFill className="pr-1" /> Pinata{" "}
               </div>
             </div>

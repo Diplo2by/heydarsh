@@ -11,7 +11,7 @@ const About = () => {
             BIO
           </p>
           <p className="uppercase text-2xl py-4">But Who is Darsh exactly?</p>
-          <p className="py-2 text-gray-600 text-justify">
+          <p className="py-2 text-gray-600 dark:text-gray-300 text-justify">
             Hello, I'm Darshan or Darsh or Vdarsh or Diplo depending on who you
             ask. I'm a B.Tech undergrad from REVA University,
             Bengaluru. As a CompSci major, I enjoy working in the
@@ -20,7 +20,7 @@ const About = () => {
             staunch supporter and proponent of FOSS tech and will try to include
             as many open-source resources in my projects as I can.
           </p>
-          <p className="py-3 text-gray-600 text-justify">
+          <p className="py-3 text-gray-600 dark:text-gray-300 text-justify">
             My other interests include quizzing and debating, have a degree of
             experience in both of them. I also love to write, heck I even wrote
             content for a budding esports and gaming site. Moreover, I also
@@ -28,7 +28,7 @@ const About = () => {
             published in the school magazine, so yeah I think we agree that I
             can do a bit of writing.
           </p>
-          <p className="py-3 text-gray-600 text-justify">
+          <p className="py-3 text-gray-600 dark:text-gray-300 text-justify">
             I am also a huge fan of performing in general, be it podcasts, Radio
             shows Dumb Charades, be it extempore or or even Mad Ads, I'll whip
             up something on time and make it look more than presentable. My past
@@ -40,13 +40,13 @@ const About = () => {
             mention broken humour and dank wit.
           </p>
           <Link href='/#projects'>
-          <p className="py-3 text-gray-600 underline cursor-pointer">
+          <p className="py-3 text-gray-600 dark:text-gray-300 underline cursor-pointer">
             Feel free to check out my past endeavours
           </p>
           </Link>
           
         </div>
-        <div className="w-full h-auto m-auto shadow-xl shadow-gray-400 rounded-xl flex items-center justify-center p-4 hover:scale-105 ease-in duration-300">
+        <div className="w-full h-auto m-auto shadow-xl shadow-gray-400 dark:shadow-gray-600 rounded-xl flex items-center justify-center p-4 hover:scale-105 ease-in duration-300">
           <Image className="rounded-xl" src={darsh_pic} alt="Darshan's Picture"/>
         </div>
       </div>

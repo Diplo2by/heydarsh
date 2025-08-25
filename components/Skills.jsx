@@ -4,9 +4,9 @@ import python from "../public/assets/skills/python.webp";
 import html from "../public/assets/skills/html.webp";
 import github from "../public/assets/skills/github.webp";
 import css from "../public/assets/skills/css3.webp";
-import javascript from "../public/assets/skills/javascript.webp";
+import javascript from "../public/assets/skills/javascript.png";
 import next from "../public/assets/skills/next.webp";
-import rust from "../public/assets/skills/rust.webp";
+import rust from "../public/assets/skills/rust.png";
 import tailwind from "../public/assets/skills/tailwind.webp";
 import solidity from "../public/assets/skills/solidity.webp";
 import metamask from "../public/assets/skills/metamask.webp";
@@ -33,6 +33,7 @@ const Skills = () => {
     { name: "Rust", icon: rust },
     { name: "Content Curation", icon: writing },
   ];
+  const blackIcons = ["GitHub Actions"];
 
   return (
     <div id="skills" className="w-full lg:h-screen p-2">
@@ -45,7 +46,7 @@ const Skills = () => {
           {skillsList.map((skill, index) => (
             <div
               key={index}
-              className="p-6 shadow-xl rounded-xl hover:scale-125 ease-in duration-300"
+              className="p-6 shadow-xl dark:shadow-gray-600 rounded-xl hover:scale-125 ease-in duration-300"
             >
               <div className="grid grid-cols-2 gap-4 justify-center items-center">
                 <div className="m-auto">
@@ -54,6 +55,11 @@ const Skills = () => {
                     width="64"
                     src={skill.icon}
                     alt={`Skill ${skill.name}`}
+                    className={
+                      !blackIcons.includes(skill.name)
+                        ? "dark:invert dark:brightness-0 dark:contrast-100"
+                        : ""
+                    }
                   />
                 </div>
                 <div className="flex flex-col items-center justify-center">
