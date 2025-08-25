@@ -2,10 +2,13 @@ import '../styles/globals.css'
 import Navbar from '../components/Navbar'
 import {Montserrat} from "next/font/google"
 import {Analytics} from '@vercel/analytics/react'
+import { ThemeProvider } from 'next-themes'
+
 const montserrat = Montserrat({subsets:['latin']})
 
 function MyApp({ Component, pageProps }) {
-  return (<>
+  return (
+  <ThemeProvider attribute="class">
   <style jsx global>{`
         html {
           font-family: ${montserrat.style.fontFamily},'sans-serif';
@@ -14,7 +17,7 @@ function MyApp({ Component, pageProps }) {
   <Navbar/>
   <Component {...pageProps}/> 
   <Analytics/>
-  </>)
+  </ThemeProvider>)
 }
 
 export default MyApp
