@@ -20,7 +20,7 @@ import fastApi from "../public/assets/skills/FastAPI.webp";
 const Skills = () => {
   // Skill items
   const skillsList = [
-    { name: "JavaScript", icon: javascript },
+    { name: "Java Script", icon: javascript },
     { name: "Next.js", icon: next },
     { name: "Python", icon: python },
     { name: "Fast API", icon: fastApi },
