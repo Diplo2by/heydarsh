@@ -6,12 +6,11 @@ import { IoMdDocument } from 'react-icons/io'
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { BiMailSend } from "react-icons/bi";
 import { useRouter } from "next/router";
+import ThemeSwitcher from "./ThemeSwitcher";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] = useState(false);
-  const [linkColor, setLinkColor] = useState("#1f2937");
-  const [navBg, setNavBg] = useState("#ecf0f3");
   const router = useRouter();
 
   const handleNav = () => {
@@ -33,11 +32,10 @@ const Navbar = () => {
   return (
     <div
       id="navbar"
-      style={{ backgroundColor: `${navBg}` }}
       className={
         shadow
-          ? "fixed w-full h-20 shadow-xl z-[100]"
-          : "fixed w-full h-20 z-[100]"
+          ? "fixed w-full h-20 shadow-xl z-[100] bg-[#ecf0f3] dark:bg-gray-900"
+          : "fixed w-full h-20 z-[100] bg-[#ecf0f3] dark:bg-gray-900"
       }
     >
       <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
@@ -51,7 +49,7 @@ const Navbar = () => {
           />
         </Link>
         <div>
-          <ul style={{ color: `${linkColor}` }} className="hidden md:flex">
+          <ul className="hidden md:flex items-center">
             <Link href="/">
               <li className="ml-10 text-sm uppercase hover:border-b">Home</li>
             </Link>
@@ -66,9 +64,11 @@ const Navbar = () => {
                 Projects
               </li>
             </Link>
+            <li className="ml-10">
+              <ThemeSwitcher />
+            </li>
           </ul>
           <div
-            style={{ color: `${linkColor}` }}
             onClick={handleNav}
             className="absolute right-5 md:hidden"
           >
@@ -86,7 +86,7 @@ const Navbar = () => {
           <div
             className={
               nav
-                ? "fixed right-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500"
+                ? "fixed right-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] dark:bg-gray-800 p-10 ease-in duration-500"
                 : "fixed left-[-100%] p-10 ease-in duration-300"
             }
           >
