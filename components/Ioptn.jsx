@@ -34,7 +34,7 @@ const Easyocr = () => {
                     <div className="p-2">
                         <p className="text-center text-xl font-bold pb-2">Contributors</p>
                         <div className="grid grid-cols-1 md:grid-cols-1">
-                            <div className="text-gray-600 text-xl py-2 flex items-center">
+                            <div className=" text-xl py-2 flex items-center">
                                 <RiGithubFill className="pr-1" />{" "}
                                 <Link href="https://github.com/Mr-DJ" target="_blank">
                                     Samuel Jonathan
@@ -66,16 +66,16 @@ const Easyocr = () => {
                     <div className="p-2">
                         <p className="text-center font-bold pb-2">Next Js</p>
                         <div className="grid grid-cols-3 md:grid-cols-1">
-                            <div className="text-gray-600 py-2 flex items-center">
+                            <div className=" py-2 flex items-center">
                                 <RiRadioButtonFill className="pr-1" /> Hardhat
                             </div>
-                            <div className="text-gray-600 py-2 flex items-center">
+                            <div className=" py-2 flex items-center">
                                 <RiRadioButtonFill className="pr-1" /> Metamask
                             </div>
-                            <div className="text-gray-600 py-2 flex items-center">
+                            <div className=" py-2 flex items-center">
                                 <RiRadioButtonFill className="pr-1" /> Matplotlib
                             </div>
-                            <div className="text-gray-600 py-2 flex items-center">
+                            <div className=" py-2 flex items-center">
                                 <RiRadioButtonFill className="pr-1" /> Tailwind CSS
                             </div>
                         </div>

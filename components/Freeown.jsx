@@ -9,9 +9,7 @@ const Freeown = () => {
   return (
     <div>
       <Head>
-        <title>
-          Projects - FreeOwn
-        </title>
+        <title>Projects - FreeOwn</title>
       </Head>
       <div className="w-screen h-[30vh] lg:h-[40vh] relative">
         <div className="absolute top-0 left-0 w-full h-[30vh] lg:h-[40vh] bg-black/80 z-10" />
@@ -57,22 +55,22 @@ const Freeown = () => {
           <div className="p-2">
             <p className="text-center font-bold pb-2">Tech Stack</p>
             <div className="grid grid-cols-3 md:grid-cols-1">
-              <div className="text-gray-600 py-2 flex items-center">
+              <div className=" py-2 flex items-center">
                 <RiRadioButtonFill className="pr-1" /> Solidity
               </div>
-              <div className="text-gray-600 py-2 flex items-center">
+              <div className=" py-2 flex items-center">
                 <RiRadioButtonFill className="pr-1" /> Flutter
               </div>
-              <div className="text-gray-600 py-2 flex items-center">
+              <div className=" py-2 flex items-center">
                 <RiRadioButtonFill className="pr-1" /> WEB3dart
               </div>
-              <div className="text-gray-600 py-2 flex items-center">
+              <div className=" py-2 flex items-center">
                 <RiRadioButtonFill className="pr-1" /> Metamask{" "}
               </div>
-              <div className="text-gray-600 py-2 flex items-center">
+              <div className=" py-2 flex items-center">
                 <RiRadioButtonFill className="pr-1" /> Infura{" "}
               </div>
-              <div className="text-gray-600 py-2 flex items-center">
+              <div className=" py-2 flex items-center">
                 <RiRadioButtonFill className="pr-1" /> Pinata{" "}
               </div>
             </div>

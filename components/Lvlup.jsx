@@ -55,13 +55,13 @@ const Lvlup = () => {
                     <div className="p-2">
                         <p className="text-center font-bold pb-2">Tech Stack</p>
                         <div className="grid grid-cols-3 md:grid-cols-1">
-                            <div className="text-gray-600 py-2 flex items-center">
+                            <div className=" py-2 flex items-center">
                                 <RiRadioButtonFill className="pr-1" /> Next JS
                             </div>
-                            <div className="text-gray-600 py-2 flex items-center">
+                            <div className=" py-2 flex items-center">
                                 <RiRadioButtonFill className="pr-1" /> Tailwind CSS
                             </div>
-                            <div className="text-gray-600 py-2 flex items-center">
+                            <div className=" py-2 flex items-center">
                                 <RiRadioButtonFill className="pr-1" /> Vercel
                             </div>
 
