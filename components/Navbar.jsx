@@ -70,6 +70,11 @@ const Navbar = () => {
                 Projects
               </li>
             </Link>
+            <Link href="/ramblings">
+              <li className="ml-10 text-sm uppercase hover:border-b text-gray-700 dark:text-gray-300 hover:text-[#5651e9] dark:hover:text-[#7c78ff] transition-colors duration-300">
+                Ramblings
+              </li>
+            </Link>
             <li className="ml-10">
               <ThemeSwitcher />
             </li>
@@ -150,6 +155,14 @@ const Navbar = () => {
                     className="py-4 text-sm text-gray-700 dark:text-gray-300 hover:text-[#5651e9] dark:hover:text-[#7c78ff] transition-colors duration-300"
                   >
                     Projects
+                  </li>
+                </Link>
+                <Link href="/ramblings">
+                  <li
+                    onClick={() => setNav(false)}
+                    className="py-4 text-sm text-gray-700 dark:text-gray-300 hover:text-[#5651e9] dark:hover:text-[#7c78ff] transition-colors duration-300"
+                  >
+                    Ramblings
                   </li>
                 </Link>
                 <li>
