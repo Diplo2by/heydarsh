@@ -7,10 +7,10 @@ export default function Custom404() {
         <h1 className="text-9xl font-extrabold tracking-widest text-[#5651e9]">
           404
         </h1>
-        <p className="text-3xl md:text-4xl lg:text-5xl text-gray-800 mt-12">
+        <p className="text-3xl md:text-4xl lg:text-5xl text-gray-800 dark:text-gray-100 mt-12">
           Oh no somebody stole that page :(
         </p>
-        <p className="md:text-lg lg:text-xl text-gray-600 mt-8">
+        <p className="md:text-lg lg:text-xl text-gray-600 dark:text-gray-400 mt-8">
           Have you tried checking the URL again?{" "}
         </p>
         <Link
