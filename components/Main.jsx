@@ -2,6 +2,7 @@ import React from "react";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { IoMdDocument } from "react-icons/io";
 import { BiMailSend } from "react-icons/bi";
+import { ReactTyped } from "react-typed";
 const Main = () => {
   return (
     <div id="main" className="w-full h-screen text-center">
@@ -13,7 +14,23 @@ const Main = () => {
           <h1 className="py-4 text-gray-700 dark:text-gray-200">
             Hey! I'm <span className="text-[#5651e9]"> DARSH</span>
           </h1>
-          <h1 className="py-2 text-gray-700 dark:text-gray-200">I Build Tech & Communities</h1>
+          <h2 className="py-2 text-gray-700 dark:text-gray-200">
+            I Build{" "}
+            <ReactTyped
+              strings={[
+                "Applications...",
+                "Websites...",
+                "Communities...",
+                "Solutions...",
+                "Connections...",
+                "Event Experiences..",
+              ]}
+              typeSpeed={80}
+              backSpeed={60}
+              loop
+              className="text-[#5651e9]"
+            />
+          </h2>
           <p className="py-4 text-gray-600 dark:text-gray-300 max-w-[85%] m-auto text-justify md:text-center">
             I am your friendly neighborhood tech bro. I happen to be quite
             innovative and can hack up solutions for challenges in tech or
@@ -39,10 +56,7 @@ const Main = () => {
                 <FaLinkedin />
               </div>
             </a>
-            <a
-              href="/assets/resume/resume.pdf"
-              target="_blank"
-            >
+            <a href="/assets/resume/resume.pdf" target="_blank">
               <div className="rounded-full shadow-lg shadow-gray-400 dark:shadow-gray-600 p-6 cursor-pointer hover:scale-125 ease-in duration-300">
                 <IoMdDocument />
               </div>
