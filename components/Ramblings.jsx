@@ -5,7 +5,7 @@ const Ramblings = ({ posts }) => {
   return (
     <div
       id="ramblings"
-      className="w-full md:h-screen px-2 flex items-center py-16"
+      className="w-full md:h-screen px-2 flex items-center md:py-16 py-24"
     >
       <div className="max-w-[1240px] m-auto w-full">
         <p className="uppercase text-xl tracking-widest text-[#5651e9]">
