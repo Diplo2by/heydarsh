@@ -9,7 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tailwindcss/typography": "^0.5.19",
     "@vercel/analytics": "^1.0.1",
+    "gray-matter": "^4.0.3",
     "https-proxy-agent": "^7.0.1",
     "lucide-react": "^0.479.0",
     "next": "^14.2.31",
@@ -17,6 +19,8 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-icons": "^4.6.0",
+    "remark": "^15.0.1",
+    "remark-html": "^16.0.1",
     "sharp": "^0.34.3"
   },
   "devDependencies": {
