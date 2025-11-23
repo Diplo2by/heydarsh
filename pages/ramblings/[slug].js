@@ -5,7 +5,7 @@ import matter from "gray-matter";
 import { remark } from "remark";
 import html from "remark-html";
 
-export default function PostPage({ frontmatter, content }) {
+export default function PostPage({ frontmatter, content, readingTime }) {
   return (
     <div className="px-4 md:px-0 py-16">
       <Head>
@@ -20,6 +20,7 @@ export default function PostPage({ frontmatter, content }) {
       <div className="max-w-[1240px] m-auto">
         <h1 className="text-3xl font-bold py-4">{frontmatter.title}</h1>
         <p className="text-gray-600 dark:text-gray-300">{frontmatter.date}</p>
+        <p>{readingTime} min read</p>
         {frontmatter.banner && (
           <div className="flex justify-center py-8">
             <img
@@ -57,6 +58,7 @@ export async function getStaticProps({ params: { slug } }) {
   );
 
   const { data: frontmatter, content } = matter(markdownWithMeta);
+  const readingTime = calculateReadingTime(content);
   const processedContent = await remark().use(html).process(content);
   const contentHtml = processedContent.toString();
 
@@ -64,6 +66,14 @@ export async function getStaticProps({ params: { slug } }) {
     props: {
       frontmatter,
       content: contentHtml,
+      readingTime,
     },
   };
+}
+
+function calculateReadingTime(content) {
+  const wordsPerMinute = 200;
+  const wordCount = content.trim().split(/\s+/).length;
+  const readingTime = Math.ceil(wordCount / wordsPerMinute);
+  return readingTime;
 }
