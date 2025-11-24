@@ -1,5 +1,5 @@
 ---
-title: "Who is the hero The Mecha or the Man"
+title: "Who is the hero? The Mecha or the Man"
 date: "2025-11-23"
 banner: "https://cdn.discordapp.com/attachments/1439638267405271151/1440628472685924422/Screenshot_307.png?ex=69241f51&is=6922cdd1&hm=31cedcbe9cb02cc179a7d4e2a81316b501d919085be84025bb423f152210385e"
 ---
