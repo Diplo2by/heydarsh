@@ -5,7 +5,9 @@
 
 html {
   scroll-behavior: smooth;
-
+}
+.prose img {
+  @apply mx-auto rounded-xl shadow-md my-8;
 }
 
 @layer base{
