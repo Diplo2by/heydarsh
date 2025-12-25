@@ -1,7 +1,7 @@
 ---
 title: "Who is the hero? The Mecha or the Man"
 date: "2025-11-23"
-banner: "https://cdn.discordapp.com/attachments/1439638267405271151/1440628472685924422/Screenshot_307.png?ex=69241f51&is=6922cdd1&hm=31cedcbe9cb02cc179a7d4e2a81316b501d919085be84025bb423f152210385e"
+banner: "/assets/ramblings/dispatch.webp"
 ---
 
 If one were to ask me what game I have played the most, it inarguably would be League of Legends. Now if you were to ask me why it's the case, I have several ways to answer it. Some of the closest people I hang out with have also been bitten by the same bug. It doesn't get old, it doesn't change too much. Analogous to a bag of chips or a plate of Sambar dip idly. There’s MOBA and then there's good and bad MOBA.
