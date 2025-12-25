@@ -1,5 +1,5 @@
 ---
-title: "Literature, Translations and, Flight Cancellations"
+title: "Literature, Translations, and Flight Cancellations"
 date: "2025-12-25"
 banner: "/assets/ramblings/litfest.webp"
 ---
