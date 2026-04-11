@@ -11,7 +11,15 @@ const Ramblings = ({ posts }) => {
         <p className="uppercase text-xl tracking-widest text-[#5651e9]">
           Ramblings
         </p>
-        <p className="uppercase text-2xl py-4">My Thoughts and Musings</p>
+        <div className="flex items-center justify-between gap-4 py-4 flex-wrap">
+          <p className="uppercase text-2xl">My Thoughts and Musings</p>
+          <Link
+            href="/rss.xml"
+            className="text-sm font-semibold text-[#5651e9] hover:underline"
+          >
+            Subscribe to RSS
+          </Link>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {posts.map((post) => (
             <Link
