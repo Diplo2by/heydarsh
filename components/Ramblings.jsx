@@ -1,7 +1,19 @@
-import React from "react";
+import React, { useMemo, useState } from "react";
 import Link from "next/link";
 
-const Ramblings = ({ posts }) => {
+const Ramblings = ({ posts, allTags }) => {
+  const [activeTag, setActiveTag] = useState("All");
+
+  const filteredPosts = useMemo(() => {
+    if (activeTag === "All") {
+      return posts;
+    }
+
+    return posts.filter((post) =>
+      (post.frontmatter.tags || []).includes(activeTag)
+    );
+  }, [activeTag, posts]);
+
   return (
     <div
       id="ramblings"
@@ -20,8 +32,24 @@ const Ramblings = ({ posts }) => {
             Subscribe to RSS
           </Link>
         </div>
+        <div className="flex flex-wrap gap-2 mb-6">
+          {["All", ...allTags].map((tag) => (
+            <button
+              key={tag}
+              type="button"
+              onClick={() => setActiveTag(tag)}
+              className={`px-3 py-1 rounded-full text-xs uppercase tracking-wide transition-colors ${
+                activeTag === tag
+                  ? "bg-[#5651e9] text-white shadow-none normal-case"
+                  : "bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-700 shadow-none normal-case"
+              }`}
+            >
+              {tag}
+            </button>
+          ))}
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {posts.map((post) => (
+          {filteredPosts.map((post) => (
             <Link
               key={post.slug}
               href={`/ramblings/${post.slug}`}
@@ -43,6 +71,18 @@ const Ramblings = ({ posts }) => {
                     <p className="text-gray-600 dark:text-gray-300 text-sm line-clamp-2 mb-4">
                       {post.frontmatter.excerpt}
                     </p>
+                  )}
+                  {post.frontmatter.tags?.length > 0 && (
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {post.frontmatter.tags.map((tag) => (
+                        <span
+                          key={`${post.slug}-${tag}`}
+                          className="text-xs px-2 py-1 rounded-full bg-[#5651e9]/10 text-[#5651e9]"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
                   )}
 
                   <div className="flex items-center text-[#5651e9] font-medium text-sm">
@@ -70,6 +110,11 @@ const Ramblings = ({ posts }) => {
             </Link>
           ))}
         </div>
+        {filteredPosts.length === 0 && (
+          <p className="text-gray-600 dark:text-gray-300 mt-6">
+            No posts found for this tag yet.
+          </p>
+        )}
       </div>
     </div>
   );

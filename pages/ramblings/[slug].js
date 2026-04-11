@@ -1,12 +1,16 @@
 import Head from "next/head";
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
 import { remark } from "remark";
 import html from "remark-html";
 import { useState } from "react";
+import Link from "next/link";
+import { getAllPosts, getPostBySlug, getRelatedPosts } from "../../lib/ramblings";
 
-export default function PostPage({ frontmatter, content, readingTime }) {
+export default function PostPage({
+  frontmatter,
+  content,
+  readingTime,
+  relatedPosts,
+}) {
   const [copied, setCopied] = useState(false);
   const postUrl = `https://www.heydarsh.in/ramblings/${frontmatter.slug}`;
 
@@ -48,6 +52,18 @@ export default function PostPage({ frontmatter, content, readingTime }) {
               <p>•</p>
               <p>{readingTime} min read</p>
             </div>
+            {frontmatter.tags?.length > 0 && (
+              <div className="flex flex-wrap gap-2 pt-3">
+                {frontmatter.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="text-xs px-2 py-1 rounded-full bg-[#5651e9]/10 text-[#5651e9]"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            )}
           </div>
           <button
             onClick={handleShare}
@@ -82,16 +98,37 @@ export default function PostPage({ frontmatter, content, readingTime }) {
           </div>
         )}
         <div className="prose dark:prose-dark max-w-none py-8" dangerouslySetInnerHTML={{ __html: content }}></div>
+        {relatedPosts.length > 0 && (
+          <section className="py-6 border-t border-gray-200 dark:border-gray-700">
+            <h2 className="text-2xl mb-4">Related Ramblings</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {relatedPosts.map((post) => (
+                <Link
+                  key={post.slug}
+                  href={`/ramblings/${post.slug}`}
+                  className="p-4 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-[#5651e9] transition-colors"
+                >
+                  <p className="text-sm text-gray-500 dark:text-gray-400">
+                    {post.frontmatter.date}
+                  </p>
+                  <h3 className="text-lg mt-1">{post.frontmatter.title}</h3>
+                  <p className="text-sm mt-2 text-gray-600 dark:text-gray-300 line-clamp-3">
+                    {post.frontmatter.excerpt}
+                  </p>
+                </Link>
+              ))}
+            </div>
+          </section>
+        )}
       </div>
     </div>
   );
 }
 
 export async function getStaticPaths() {
-  const files = fs.readdirSync(path.join("posts"));
-  const paths = files.map((filename) => ({
+  const paths = getAllPosts().map((post) => ({
     params: {
-      slug: filename.replace(".md", ""),
+      slug: post.slug,
     },
   }));
   return {
@@ -101,12 +138,14 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params: { slug } }) {
-  const markdownWithMeta = fs.readFileSync(
-    path.join("posts", slug + ".md"),
-    "utf-8"
+  const post = getPostBySlug(slug);
+  const { frontmatter, content, readingTime } = post;
+  const relatedPosts = getRelatedPosts(slug, frontmatter.tags, 3).map(
+    (relatedPost) => ({
+      slug: relatedPost.slug,
+      frontmatter: relatedPost.frontmatter,
+    })
   );
-  const { data: frontmatter, content } = matter(markdownWithMeta);
-  const readingTime = calculateReadingTime(content);
   const processedContent = await remark().use(html).process(content);
   const contentHtml = processedContent.toString();
   return {
@@ -114,13 +153,7 @@ export async function getStaticProps({ params: { slug } }) {
       frontmatter: { ...frontmatter, slug },
       content: contentHtml,
       readingTime,
+      relatedPosts,
     },
   };
-}
-
-function calculateReadingTime(content) {
-  const wordsPerMinute = 150;
-  const wordCount = content.trim().split(/\s+/).length;
-  const readingTime = Math.ceil(wordCount / wordsPerMinute);
-  return readingTime;
 }
