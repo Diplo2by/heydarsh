@@ -2,6 +2,10 @@
 title: "Who is the hero? The Mecha or the Man"
 date: "2025-11-23"
 banner: "/assets/ramblings/dispatch.webp"
+excerpt: "A character-first review of Dispatch, and why Robert feels more heroic than his suit."
+tags:
+  - Gaming
+  - Reviews
 ---
 
 If one were to ask me what game I have played the most, it inarguably would be League of Legends. Now if you were to ask me why it's the case, I have several ways to answer it. Some of the closest people I hang out with have also been bitten by the same bug. It doesn't get old, it doesn't change too much. Analogous to a bag of chips or a plate of Sambar dip idly. There’s MOBA and then there's good and bad MOBA.

@@ -2,6 +2,11 @@
 title: "Baking Bad!"
 date: "2026-02-07"
 banner: "/assets/ramblings/bakingBad.webp"
+excerpt: "How I accidentally got serious about baking, plus practical oven and recipe tips that worked."
+tags:
+  - Baking
+  - Hobby
+  - Tips
 ---
 
 First rambling of the year just dropped and we are talking about baking. Out of many hobbies I've picked up over the past couple of years, baking has been something I've stuck with much longer than expected. As someone with no soft spots for sweets, I am quite surprised how well it has turned out so far and not to mention how fulfilling the whole hobby is. So grab your notes and strap in, we are about to discuss, reminisce and of course learn how not to bake.

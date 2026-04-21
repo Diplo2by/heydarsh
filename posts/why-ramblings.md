@@ -2,6 +2,10 @@
 title: 'Why Ramblings?'
 date: '2025-10-12'
 banner: 'https://pbs.twimg.com/media/FseMFWIaUAIkXcV?format=png&name=900x900'
+excerpt: 'Why I revived writing on HeyDarsh and what I want this Ramblings section to become.'
+tags:
+  - Writing
+  - Off my chest
 ---
 
 Journaling, blogging, and copywriting are things I've enjoyed all my life.

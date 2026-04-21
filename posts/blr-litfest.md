@@ -2,6 +2,11 @@
 title: "Literature, Translations, and Flight Cancellations"
 date: "2025-12-25"
 banner: "/assets/ramblings/litfest.webp"
+excerpt: "Notes from Bangalore Literature Festival, from translation panels to historic city stories."
+tags:
+  - Literature
+  - Events
+  - Bengaluru
 ---
 
 As someone who has lived in Bangalore all my life, I find this city offers several things to look forward to every year. One such annual constant on my calendar is the “Bangalore Literature Festival,” and I have made an effort to not miss it. I first came across this beautiful event when _The Hindu_ pitched it to me on a Sunday morning. Between my Bertie Ashley column and Mr Mathrubootham’s letter, on a typical Sunday morning, my eyes wandered across the topical featuring LitFest in great wonder. That, folks, is when I realised hey this sounds fun and I want to be there. Thus began my tantrum, much to my parents’ chagrin, to attend the event.
