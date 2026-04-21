@@ -51,27 +51,27 @@ const Navbar = () => {
         <div>
           <ul className="hidden md:flex items-center">
             <Link href="/">
-              <li className="ml-10 text-sm uppercase hover:border-b text-gray-700 dark:text-gray-300 hover:text-[#5651e9] dark:hover:text-[#7c78ff] transition-colors duration-300">
+              <li className="ml-10 text-sm uppercase hover:border-b text-gray-700 dark:text-gray-300 hover:text-brand dark:hover:text-[#7c78ff] transition-colors duration-300">
                 Home
               </li>
             </Link>
             <Link href="/#about">
-              <li className="ml-10 text-sm uppercase hover:border-b text-gray-700 dark:text-gray-300 hover:text-[#5651e9] dark:hover:text-[#7c78ff] transition-colors duration-300">
+              <li className="ml-10 text-sm uppercase hover:border-b text-gray-700 dark:text-gray-300 hover:text-brand dark:hover:text-[#7c78ff] transition-colors duration-300">
                 About
               </li>
             </Link>
             <Link href="/#skills">
-              <li className="ml-10 text-sm uppercase hover:border-b text-gray-700 dark:text-gray-300 hover:text-[#5651e9] dark:hover:text-[#7c78ff] transition-colors duration-300">
+              <li className="ml-10 text-sm uppercase hover:border-b text-gray-700 dark:text-gray-300 hover:text-brand dark:hover:text-[#7c78ff] transition-colors duration-300">
                 Skills
               </li>
             </Link>
             <Link href="/#projects">
-              <li className="ml-10 text-sm uppercase hover:border-b text-gray-700 dark:text-gray-300 hover:text-[#5651e9] dark:hover:text-[#7c78ff] transition-colors duration-300">
+              <li className="ml-10 text-sm uppercase hover:border-b text-gray-700 dark:text-gray-300 hover:text-brand dark:hover:text-[#7c78ff] transition-colors duration-300">
                 Projects
               </li>
             </Link>
             <Link href="/ramblings">
-              <li className="ml-10 text-sm uppercase hover:border-b text-gray-700 dark:text-gray-300 hover:text-[#5651e9] dark:hover:text-[#7c78ff] transition-colors duration-300">
+              <li className="ml-10 text-sm uppercase hover:border-b text-gray-700 dark:text-gray-300 hover:text-brand dark:hover:text-[#7c78ff] transition-colors duration-300">
                 Ramblings
               </li>
             </Link>
@@ -128,7 +128,7 @@ const Navbar = () => {
                 <Link href="/">
                   <li
                     onClick={() => setNav(false)}
-                    className="py-4 text-sm text-gray-700 dark:text-gray-300 hover:text-[#5651e9] dark:hover:text-[#7c78ff] transition-colors duration-300"
+                    className="py-4 text-sm text-gray-700 dark:text-gray-300 hover:text-brand dark:hover:text-[#7c78ff] transition-colors duration-300"
                   >
                     Home
                   </li>
@@ -136,7 +136,7 @@ const Navbar = () => {
                 <Link href="/#about">
                   <li
                     onClick={() => setNav(false)}
-                    className="py-4 text-sm text-gray-700 dark:text-gray-300 hover:text-[#5651e9] dark:hover:text-[#7c78ff] transition-colors duration-300"
+                    className="py-4 text-sm text-gray-700 dark:text-gray-300 hover:text-brand dark:hover:text-[#7c78ff] transition-colors duration-300"
                   >
                     About
                   </li>
@@ -144,7 +144,7 @@ const Navbar = () => {
                 <Link href="#skills">
                   <li
                     onClick={() => setNav(false)}
-                    className="py-4 text-sm text-gray-700 dark:text-gray-300 hover:text-[#5651e9] dark:hover:text-[#7c78ff] transition-colors duration-300"
+                    className="py-4 text-sm text-gray-700 dark:text-gray-300 hover:text-brand dark:hover:text-[#7c78ff] transition-colors duration-300"
                   >
                     Skills
                   </li>
@@ -152,7 +152,7 @@ const Navbar = () => {
                 <Link href="/#projects">
                   <li
                     onClick={() => setNav(false)}
-                    className="py-4 text-sm text-gray-700 dark:text-gray-300 hover:text-[#5651e9] dark:hover:text-[#7c78ff] transition-colors duration-300"
+                    className="py-4 text-sm text-gray-700 dark:text-gray-300 hover:text-brand dark:hover:text-[#7c78ff] transition-colors duration-300"
                   >
                     Projects
                   </li>
@@ -160,7 +160,7 @@ const Navbar = () => {
                 <Link href="/ramblings">
                   <li
                     onClick={() => setNav(false)}
-                    className="py-4 text-sm text-gray-700 dark:text-gray-300 hover:text-[#5651e9] dark:hover:text-[#7c78ff] transition-colors duration-300"
+                    className="py-4 text-sm text-gray-700 dark:text-gray-300 hover:text-brand dark:hover:text-[#7c78ff] transition-colors duration-300"
                   >
                     Ramblings
                   </li>
@@ -177,13 +177,13 @@ const Navbar = () => {
                 </p>
                 <div className="flex items-center justify-between my-4 w-full sm:w-[80%]">
                   <a href="https://github.com/Diplo2by" target="_blank">
-                    <div className="rounded-full shadow-lg shadow-gray-400 dark:shadow-gray-600 bg-white dark:bg-gray-700 p-3 cursor-pointer hover:scale-105 ease-in duration-300 text-gray-700 dark:text-gray-300 hover:text-[#5651e9] dark:hover:text-[#7c78ff]">
+                    <div className="rounded-full shadow-lg shadow-gray-400 dark:shadow-gray-600 bg-white dark:bg-gray-700 p-3 cursor-pointer hover:scale-105 ease-in duration-300 text-gray-700 dark:text-gray-300 hover:text-brand dark:hover:text-[#7c78ff]">
                       <FaGithub />
                     </div>
                   </a>
 
                   <a href="mailto:contactdarshanv@gmail.com" target="_blank">
-                    <div className="rounded-full shadow-lg shadow-gray-400 dark:shadow-gray-600 bg-white dark:bg-gray-700 p-3 cursor-pointer hover:scale-105 ease-in duration-300 text-gray-700 dark:text-gray-300 hover:text-[#5651e9] dark:hover:text-[#7c78ff]">
+                    <div className="rounded-full shadow-lg shadow-gray-400 dark:shadow-gray-600 bg-white dark:bg-gray-700 p-3 cursor-pointer hover:scale-105 ease-in duration-300 text-gray-700 dark:text-gray-300 hover:text-brand dark:hover:text-[#7c78ff]">
                       <BiMailSend />
                     </div>
                   </a>
@@ -191,12 +191,12 @@ const Navbar = () => {
                     href="https://www.linkedin.com/in/vdarshh/"
                     target="_blank"
                   >
-                    <div className="rounded-full shadow-lg shadow-gray-400 dark:shadow-gray-600 bg-white dark:bg-gray-700 p-3 cursor-pointer hover:scale-105 ease-in duration-300 text-gray-700 dark:text-gray-300 hover:text-[#5651e9] dark:hover:text-[#7c78ff]">
+                    <div className="rounded-full shadow-lg shadow-gray-400 dark:shadow-gray-600 bg-white dark:bg-gray-700 p-3 cursor-pointer hover:scale-105 ease-in duration-300 text-gray-700 dark:text-gray-300 hover:text-brand dark:hover:text-[#7c78ff]">
                       <FaLinkedin />
                     </div>
                   </a>
                   <a href="/assets/resume/resume.pdf" target="_blank">
-                    <div className="rounded-full shadow-lg shadow-gray-400 dark:shadow-gray-600 bg-white dark:bg-gray-700 p-3 cursor-pointer hover:scale-105 ease-in duration-300 text-gray-700 dark:text-gray-300 hover:text-[#5651e9] dark:hover:text-[#7c78ff]">
+                    <div className="rounded-full shadow-lg shadow-gray-400 dark:shadow-gray-600 bg-white dark:bg-gray-700 p-3 cursor-pointer hover:scale-105 ease-in duration-300 text-gray-700 dark:text-gray-300 hover:text-brand dark:hover:text-[#7c78ff]">
                       <IoMdDocument />
                     </div>
                   </a>

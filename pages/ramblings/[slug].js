@@ -57,7 +57,7 @@ export default function PostPage({
                 {frontmatter.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="text-xs px-2 py-1 rounded-full bg-[#5651e9]/10 text-[#5651e9]"
+                    className="text-xs px-2 py-1 rounded-full bg-brand/10 text-brand"
                   >
                     {tag}
                   </span>
@@ -106,7 +106,7 @@ export default function PostPage({
                 <Link
                   key={post.slug}
                   href={`/ramblings/${post.slug}`}
-                  className="p-4 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-[#5651e9] transition-colors"
+                  className="p-4 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-brand transition-colors"
                 >
                   <p className="text-sm text-gray-500 dark:text-gray-400">
                     {post.frontmatter.date}
