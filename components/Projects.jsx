@@ -1,78 +1,41 @@
-import React, { useEffect, useState } from "react";
-import freeownImg from "../public/assets/projects/freeown3.png";
-import medifyImg from "../public/assets/projects/medify2.png";
-import easyImg from "../public/assets/projects/easy.png";
-import lvlupImg from "../public/assets/projects/lvlup.png";
-import ioptnImg from "../public/assets/projects/ioptn.png";
-import ProjectItem from "./ProjectItem";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import ProjectItem from "./ProjectItem";
+import { projects } from "./projects";
 
 const Projects = () => {
-  const projects = [
-    {
-      title: "IOPTN Portal",
-      backgroundImg: ioptnImg,
-      projectUrl: "/ioptn",
-      techStack: "Hardhat",
-    },
-    {
-      title: "Lvl UP Creators",
-      backgroundImg: lvlupImg,
-      projectUrl: "/lvlup",
-      techStack: "Next Js",
-    },
-    {
-      title: "Medify App",
-      backgroundImg: medifyImg,
-      projectUrl: "/medify",
-      techStack: "Flutter",
-    },
-    {
-      title: "FreeOwn",
-      backgroundImg: freeownImg,
-      projectUrl: "/freeown",
-      techStack: "Next JS",
-    },
-    {
-      title: "Easy CT",
-      backgroundImg: easyImg,
-      projectUrl: "/easyocr",
-      techStack: "Easy OCR",
-    },
-  ];
+  const totalProjects = projects.length;
 
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [trackIndex, setTrackIndex] = useState(1);
   const [touchStart, setTouchStart] = useState(null);
   const [touchEnd, setTouchEnd] = useState(null);
+  const [disableTransition, setDisableTransition] = useState(false);
+  const [isPaused, setIsPaused] = useState(false);
 
-  // Minimum swipe distance (in px)
   const minSwipeDistance = 50;
 
-  const getVisibleProjects = () => {
-    const visibleCount = 1;
-    const startIndex = currentIndex;
-
-    const visibleProjects = [];
-    for (let i = 0; i < visibleCount; i++) {
-      const index = (startIndex + i) % projects.length;
-      visibleProjects.push(projects[index]);
+  const carouselProjects = useMemo(() => {
+    if (totalProjects === 0) {
+      return [];
     }
 
-    return visibleProjects;
-  };
+    return [projects[totalProjects - 1], ...projects, projects[0]];
+  }, [totalProjects]);
 
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % projects.length);
-  };
+  const currentIndex =
+    (((trackIndex - 1 + totalProjects) % totalProjects) + totalProjects) %
+    totalProjects;
 
-  const prevSlide = () => {
-    setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + projects.length) % projects.length
-    );
-  };
+  const nextSlide = useCallback(() => {
+    setTrackIndex((prevIndex) => prevIndex + 1);
+  }, []);
 
-  // Touch event handlers for swipe functionality
+  const prevSlide = useCallback(() => {
+    setTrackIndex((prevIndex) => prevIndex - 1);
+  }, []);
+
   const onTouchStart = (e) => {
+    setIsPaused(true);
     setTouchEnd(null);
     setTouchStart(e.targetTouches[0].clientX);
   };
@@ -82,6 +45,8 @@ const Projects = () => {
   };
 
   const onTouchEnd = () => {
+    setIsPaused(false);
+
     if (!touchStart || !touchEnd) return;
 
     const distance = touchStart - touchEnd;
@@ -95,84 +60,132 @@ const Projects = () => {
     }
   };
 
-  // TODO - Revist
+  const onTrackTransitionEnd = () => {
+    if (trackIndex === 0) {
+      setDisableTransition(true);
+      setTrackIndex(totalProjects);
+      return;
+    }
 
-  // Auto-scrolling effect
+    if (trackIndex === totalProjects + 1) {
+      setDisableTransition(true);
+      setTrackIndex(1);
+    }
+  };
+
   useEffect(() => {
-    const autoScroll = setInterval(() => {
-      nextSlide();
-    }, 5000); // Change slide every 5 seconds
+    if (!disableTransition) {
+      return undefined;
+    }
 
+    const frame = requestAnimationFrame(() => {
+      setDisableTransition(false);
+    });
+
+    return () => cancelAnimationFrame(frame);
+  }, [disableTransition]);
+
+  useEffect(() => {
+    if (isPaused) {
+      return undefined;
+    }
+
+    const autoScroll = setInterval(nextSlide, 5000);
     return () => clearInterval(autoScroll);
-  }, []);
+  }, [nextSlide, isPaused]);
+
+  if (totalProjects === 0) {
+    return null;
+  }
 
   return (
-    <div id="projects" className="w-full lg:h-screen p-4">
-      <div className="max-w-[1240px] mx-auto px-2 py-12 sm:py-16">
-        <p className="text-xl tracking-widest uppercase text-[#5651e9]">
+    <section
+      id="projects"
+      className="w-full overflow-hidden px-4 py-16 sm:py-20 dark:bg-slate-950"
+    >
+      <div className="max-w-[1240px] mx-auto">
+        <p className="text-sm font-semibold uppercase tracking-[0.35em] text-[#5651e9]">
           Projects
         </p>
-        <p className="py-2 sm:py-4 font-bold text-2xl md:text-4xl">What I've built</p>
+        <div className="mt-3 flex flex-wrap items-end justify-between gap-4">
+          <h2 className="max-w-2xl text-3xl font-bold leading-tight text-slate-900 dark:text-slate-100 md:text-5xl capitalize">
+            To build or not to build
+          </h2>
+          <p className="text-sm font-medium text-slate-600 dark:text-slate-300">
+            {String(currentIndex + 1).padStart(2, "0")} /{" "}
+            {String(totalProjects).padStart(2, "0")}
+          </p>
+        </div>
 
         <div
-          className="relative"
+          className="relative mt-8"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
           onTouchStart={onTouchStart}
           onTouchMove={onTouchMove}
           onTouchEnd={onTouchEnd}
         >
-          {/* Carousel left */}
-          <div className="absolute top-1/2 left-1 sm:left-4 transform -translate-y-1/2 z-10">
+          <button
+            type="button"
+            onClick={prevSlide}
+            className="absolute left-2 top-1/2 z-10 -translate-y-1/2 rounded-full border border-slate-200/80 bg-white/90 p-3 text-slate-800 shadow-md transition hover:bg-slate-100 dark:border-slate-600 dark:bg-slate-900 dark:text-slate-100 dark:hover:bg-slate-800"
+            aria-label="Previous project"
+          >
+            <ChevronLeft size={20} />
+          </button>
+
+          <div
+            className="overflow-hidden"
+            onTransitionEnd={onTrackTransitionEnd}
+          >
             <div
-              onClick={prevSlide}
-              className="p-1 sm:p-2 rounded-full bg-white dark:bg-gray-800 shadow-md hover:bg-gray-100 dark:hover:bg-gray-700 hover:cursor-pointer"
-              aria-label="Previous project"
+              className={`flex ${disableTransition ? "" : "transition-transform duration-500 ease-out"}`}
+              style={{ transform: `translateX(-${trackIndex * 100}%)` }}
             >
-              <ChevronLeft size={16} className="sm:hidden" />
-              <ChevronLeft size={24} className="hidden sm:block" />
+              {carouselProjects.map((project, idx) => (
+                <div
+                  key={`${project.slug}-${idx}`}
+                  className="w-full shrink-0 px-12 sm:px-16"
+                >
+                  <ProjectItem
+                    title={project.cardTitle}
+                    backgroundImg={project.heroImage}
+                    projectUrl={project.route}
+                    techStack={project.cardStack}
+                    summary={project.cardSummary}
+                  />
+                </div>
+              ))}
             </div>
           </div>
 
-          {/* Projects display */}
-          <div className="px-8 sm:px-20">
-            {getVisibleProjects().map((project, idx) => (
-              <ProjectItem
-                key={`${project.title}-${idx}`}
-                title={project.title}
-                backgroundImg={project.backgroundImg}
-                projectUrl={project.projectUrl}
-                techStack={project.techStack}
-              />
-            ))}
-          </div>
-
-          {/* Carousel Right */}
-          <div className="absolute top-1/2 right-1 sm:right-4 transform -translate-y-1/2 z-10">
-            <div
-              onClick={nextSlide}
-              className="p-1 sm:p-2 rounded-full bg-white dark:bg-gray-800 shadow-md hover:bg-gray-100 dark:hover:bg-gray-700 hover:cursor-pointer"
-              aria-label="Next project"
-            >
-              <ChevronRight size={16} className="sm:hidden" />
-              <ChevronRight size={24} className="hidden sm:block" />
-            </div>
-          </div>
+          <button
+            type="button"
+            onClick={nextSlide}
+            className="absolute right-2 top-1/2 z-10 -translate-y-1/2 rounded-full border border-slate-200/80 bg-white/90 p-3 text-slate-800 shadow-md transition hover:bg-slate-100 dark:border-slate-600 dark:bg-slate-900 dark:text-slate-100 dark:hover:bg-slate-800"
+            aria-label="Next project"
+          >
+            <ChevronRight size={20} />
+          </button>
         </div>
 
-        {/* Carousel indicators */}
-        <div className="flex justify-center mt-4 sm:mt-6 space-x-1 sm:space-x-2">
-          {projects.map((_, idx) => (
-            <div
-              key={idx}
-              onClick={() => setCurrentIndex(idx)}
-              className={`h-2 w-2 sm:h-3 sm:w-3 rounded-full hover:cursor-pointer
-                ${idx === currentIndex ? "bg-[#5651e9]" : "bg-gray-300 dark:bg-gray-600"}
-              `}
-              aria-label={`Go to project ${idx + 1}`}
+        <div className="mt-6 flex items-center justify-center gap-2">
+          {projects.map((project, idx) => (
+            <button
+              key={project.slug}
+              type="button"
+              onClick={() => setTrackIndex(idx + 1)}
+              aria-label={`Go to ${project.cardTitle}`}
+              className={`h-2.5 rounded-full transition-all ${
+                idx === currentIndex
+                  ? "w-10 bg-cyan-600 dark:bg-cyan-400"
+                  : "w-2.5 bg-slate-300 hover:bg-slate-400 dark:bg-slate-600 dark:hover:bg-slate-500"
+              }`}
             />
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

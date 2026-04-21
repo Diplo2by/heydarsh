@@ -1,32 +1,44 @@
-import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-const ProjectItem = ({ title, backgroundImg, projectUrl, techStack }) => {
+const ProjectItem = ({
+  title,
+  backgroundImg,
+  projectUrl,
+  techStack,
+  summary,
+}) => {
   return (
-    <div
-      id="projectItem"
-      className="relative flex items-center justify-center h-auto w-full shadow-xl shadow-gray-400 dark:shadow-gray-600 rounded-xl group hover:bg-gradient-to-r from-[#5651e9] to-[#709dff]"
-    >
-      <Image
-        className="rounded-xl group-hover:opacity-10"
-        src={backgroundImg}
-        alt={title}
-      />
-      <div className="hidden group-hover:block absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-40%] w-full px-4 md:px-0 md:w-auto">
-        <h3 className="text-sm md:text-2xl text-white tracking-wider text-center">
-          {title}
-        </h3>
-        <p className="pb-2 pt-1 md:pb-4 md:pt-2 text-white text-center text-sm sm:text-base">
+    <article className="group overflow-hidden rounded-[2rem] border border-slate-200/70 dark:border-slate-800 dark:bg-slate-900">
+      <div className="relative aspect-[16/10] w-full overflow-hidden">
+        <Image
+          src={backgroundImg}
+          alt={title}
+          fill
+          sizes="(max-width: 640px) 100vw, (max-width: 1280px) 80vw, 920px"
+          className="object-cover transition duration-500 group-hover:scale-[1.02]"
+        />
+      </div>
+
+      <div className="border-t border-slate-200 bg-white p-5 md:p-7 dark:border-slate-800 dark:bg-slate-900">
+        <p className="text-[11px] uppercase tracking-[0.3em] text-[#5651e9]">
           {techStack}
         </p>
-        <Link href={projectUrl}>
-          <p className="text-center py-1 md:py-3 md:px-5 rounded-lg bg-white text-gray-700 font-bold text-sm sm:text-base md:text-lg cursor-pointer mx-auto max-w-[100px] md:max-w-[150px] dark:bg-gray-800 dark:text-gray-200">
-            More Info
-          </p>
+        <h3 className="mt-2 text-2xl font-bold leading-tight text-slate-900 md:text-3xl dark:text-slate-100">
+          {title}
+        </h3>
+        <p className="mt-2 max-w-2xl text-sm text-slate-700 md:text-base dark:text-slate-300">
+          {summary}
+        </p>
+
+        <Link
+          href={projectUrl}
+          className="mt-4 inline-flex items-center rounded-full border border-slate-300 bg-slate-900 px-4 py-2 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-slate-700 dark:border-slate-300 dark:bg-white dark:text-slate-900 dark:hover:bg-slate-200"
+        >
+          View Project
         </Link>
       </div>
-    </div>
+    </article>
   );
 };
 
