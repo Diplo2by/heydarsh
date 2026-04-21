@@ -9,10 +9,10 @@ const Main = () => {
       <div className="max-w-[1240px] w-full h-full mx-auto flex justify-center items-center">
         <div>
           <p className="uppercase text-sm tracking-wide text-gray-600 dark:text-gray-300">
-            LET'S connect & collaborate
+            Let&apos;s connect & collaborate
           </p>
           <h1 className="py-4 text-gray-700 dark:text-gray-200">
-            Hey! I'm <span className="text-[#5651e9]"> DARSH</span>
+            Hey! I&apos;m <span className="text-[#5651e9]"> DARSH</span>
           </h1>
           <h2 className="py-2 text-gray-700 dark:text-gray-200">
             I Build{" "}
@@ -37,8 +37,8 @@ const Main = () => {
             communication. Over the years, I have habituated myself with
             learning a new thing or two every single day. My strength lies in my
             interpersonal skills built hosting, organizing and attending several
-            events. If you came across this site there's a good chance it was
-            through those events.
+            events. If you came across this site there&apos;s a good chance it
+            was through those events.
           </p>
           <div className="flex items-center justify-between max-w-[330px] m-auto py-4">
             <a href="https://github.com/Diplo2by" target="_blank">
