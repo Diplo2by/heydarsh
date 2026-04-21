@@ -12,7 +12,7 @@ const Main = () => {
             Let&apos;s connect & collaborate
           </p>
           <h1 className="py-4 text-gray-700 dark:text-gray-200">
-            Hey! I&apos;m <span className="text-[#5651e9]"> DARSH</span>
+            Hey! I&apos;m <span className="text-brand"> DARSH</span>
           </h1>
           <h2 className="py-2 text-gray-700 dark:text-gray-200">
             I Build{" "}
@@ -28,7 +28,7 @@ const Main = () => {
               typeSpeed={80}
               backSpeed={60}
               loop
-              className="text-[#5651e9]"
+              className="text-brand"
             />
           </h2>
           <p className="py-4 text-gray-600 dark:text-gray-300 max-w-[85%] m-auto text-justify md:text-center">

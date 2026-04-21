@@ -21,7 +21,7 @@ const ProjectItem = ({
       </div>
 
       <div className="border-t border-slate-200 bg-white p-5 md:p-7 dark:border-slate-800 dark:bg-slate-900">
-        <p className="text-[11px] uppercase tracking-[0.3em] text-[#5651e9]">
+        <p className="text-[11px] uppercase tracking-[0.3em] text-brand">
           {techStack}
         </p>
         <h3 className="mt-2 text-2xl font-bold leading-tight text-slate-900 md:text-3xl dark:text-slate-100">

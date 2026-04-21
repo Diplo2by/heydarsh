@@ -104,7 +104,7 @@ const Projects = () => {
       className="w-full overflow-hidden px-4 py-16 sm:py-20 dark:bg-slate-950"
     >
       <div className="max-w-[1240px] mx-auto">
-        <p className="text-sm font-semibold uppercase tracking-[0.35em] text-[#5651e9]">
+        <p className="text-sm font-semibold uppercase tracking-[0.35em] text-brand">
           Projects
         </p>
         <div className="mt-3 flex flex-wrap items-end justify-between gap-4">
@@ -178,7 +178,7 @@ const Projects = () => {
               aria-label={`Go to ${project.cardTitle}`}
               className={`h-2.5 rounded-full transition-all ${
                 idx === currentIndex
-                  ? "w-10 bg-cyan-600 dark:bg-cyan-400"
+                  ? "w-10 bg-brand dark:bg-brand"
                   : "w-2.5 bg-slate-300 hover:bg-slate-400 dark:bg-slate-600 dark:hover:bg-slate-500"
               }`}
             />

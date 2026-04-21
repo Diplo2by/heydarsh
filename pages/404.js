@@ -4,7 +4,7 @@ export default function Custom404() {
   return (
     <div className="w-full h-screen flex flex-col items-center justify-center">
       <div className="flex flex-col items-center justify-center">
-        <h1 className="text-9xl font-extrabold tracking-widest text-[#5651e9]">
+        <h1 className="text-9xl font-extrabold tracking-widest text-brand">
           404
         </h1>
         <p className="text-3xl md:text-4xl lg:text-5xl text-gray-800 dark:text-gray-100 mt-12">
